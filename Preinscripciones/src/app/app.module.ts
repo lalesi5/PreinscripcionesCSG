@@ -1,27 +1,22 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { AccesoComponent } from './Acceso/acceso/acceso.component';
-import { LoginComponent } from './Login/login/login.component';
+//RUTAS PRINCIPALES
+import { AppRoutingModule } from "src/app/app-routing.module";
 
+import { AppComponent } from "src/app/app.component";
+;
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AccesoComponent,
-    LoginComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    
-  ],
-  exports: [RouterModule],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule{}
 

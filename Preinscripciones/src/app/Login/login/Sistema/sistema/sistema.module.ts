@@ -1,0 +1,25 @@
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+
+//MODULOS
+import { SistemaRoutingModule } from "./sistema-routing.module";
+
+//COMPONENTES
+import { EstudianteComponent } from "./Estudiante/estudiante/estudiante.component";
+import { MadreComponent } from "./Madre/madre/madre.component";
+import { PadreComponent } from "./Padre/padre/padre.component";
+
+
+
+@NgModule({
+    
+    imports: [CommonModule,
+    SistemaRoutingModule,
+    EstudianteComponent,
+    MadreComponent,
+    PadreComponent,
+
+]
+ 
+}) 
+  export class SistemaModule{}
