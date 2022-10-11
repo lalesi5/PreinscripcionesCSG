@@ -5,17 +5,15 @@ import { RouterModule, Routes } from "@angular/router";
 import { SistemaComponent } from "./Sistema/sistema/sistema.component";
 
 const routes: Routes = [
-
   {
-    path: '',
-    children:[
-        {path: 'sistema', component: SistemaComponent},
-        {path: '***', redirectTo: 'login'},
+      path: '',
+      children:[
+          {path: 'sistema', component: SistemaComponent},
+          {path: '***', redirectTo: 'login'},
 
-        ]
-    
-  }
-];
+      ]
+    }
+]
 
 
 @NgModule({

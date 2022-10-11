@@ -5,7 +5,7 @@ import { CommonModule } from "@angular/common";
 import { SistemaRoutingModule } from "./sistema-routing.module";
 
 //COMPONENTES
-import { EstudianteComponent } from "./Estudiante/estudiante/estudiante.component";
+import { EstudianteComponent } from "./Estudiante/estudiante.component";
 import { MadreComponent } from "./Madre/madre/madre.component";
 import { PadreComponent } from "./Padre/padre/padre.component";
 
@@ -13,8 +13,8 @@ import { PadreComponent } from "./Padre/padre/padre.component";
 
 @NgModule({
   declarations: [
-    EstudianteComponent
-    MadreComponent
+    EstudianteComponent,
+    MadreComponent,
     PadreComponent
 ],
     imports: [CommonModule,

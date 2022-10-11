@@ -4,7 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 
 //COMPONENTES
 
-import { EstudianteComponent } from "./Estudiante/estudiante/estudiante.component";
+import { EstudianteComponent } from "./Estudiante/estudiante.component";
 import { MadreComponent } from "./Madre/madre/madre.component";
 import { PadreComponent } from "./Padre/padre/padre.component";
 
@@ -22,7 +22,7 @@ const routes: Routes = [
 
         ]   
   }
-];
+]
 
 
 @NgModule({
