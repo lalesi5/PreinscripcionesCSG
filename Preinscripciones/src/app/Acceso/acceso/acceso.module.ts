@@ -14,6 +14,6 @@ import { LoginComponent } from "src/app/Login/login/login.component";
     ],
     imports: [CommonModule,
     AccesoRoutingModule]
- 
+ //hay diosito
 }) 
   export class AccesoModule{}
