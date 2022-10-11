@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="acceso">
-        <mat-card>
-            <mat-card-title>Registro de Acceso al Sistema de Preinscripciones</mat-card-title> 
+        <mat-card class="register">
+            <mat-card-title class="tittle">Registro de acceso al Sistema de Preinscripciones</mat-card-title> 
             <mat-card-content>
                 <form>      
                     <mat-form-field appearance="fill">
@@ -20,15 +20,20 @@
                         <mat-label>Email</mat-label>
                         <input matInput placeholder="pat@example.com" required>                
                     </mat-form-field>
-                    <button mat-raised-button color="primary">Enviar</button>     
+                    <button id="botton1" mat-raised-button color="primary">Enviar</button>     
                 </form>
             </mat-card-content>
           </mat-card>
-    </div>
-    <div class="information">
-        <p>
-        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias ...
-        </p>
+          <mat-card class="information">
+            <mat-card-content>
+                <p>
+                    Estimado Representante.
+                    El proceso es únicamente para nuevos aspirantes a los niveles de Primero de Básica hasta Primero de Bachillerato. Debe registrarse en el sistema con el número de cédula del/la aspirante y un correo electrónico válido del/la representante. Inmediatamente recibirá, en el correo registrado, las instrucciones para continuar. Recuerde revisar el buzón de Spam o correo No Deseado.
+                    Si necesita soporte, por favor comuníquese al correo tecnologias@csgabriel.edu.ec
+                    Saludos cordiales.
+                </p>
+            </mat-card-content>
+          </mat-card>
     </div>
     
 </body>
