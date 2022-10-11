@@ -12,7 +12,11 @@ import { PadreComponent } from "./Padre/padre/padre.component";
 
 
 @NgModule({
-    
+  declarations: [
+    EstudianteComponent
+    MadreComponent
+    PadreComponent
+],
     imports: [CommonModule,
     SistemaRoutingModule,
     EstudianteComponent,
