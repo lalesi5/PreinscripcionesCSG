@@ -9,7 +9,7 @@ const routes: Routes = [
       path: '',
       children:[
           {path: 'sistema', component: SistemaComponent},
-          {path: '***', redirectTo: 'login'},
+          {path: '**', redirectTo: 'login'},
 
       ]
     }
