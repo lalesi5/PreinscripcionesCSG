@@ -1,9 +1,10 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
-//RUTAS PRINCIPALES
+//MODULOS
 import { AppRoutingModule } from "src/app/app-routing.module";
 
+//COMPONENTES
 import { AppComponent } from "src/app/app.component";
 ;
 
@@ -19,4 +20,3 @@ import { AppComponent } from "src/app/app.component";
     bootstrap: [AppComponent]
 })
 export class AppModule{}
-
