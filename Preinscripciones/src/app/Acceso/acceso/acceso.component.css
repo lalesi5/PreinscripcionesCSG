@@ -22,33 +22,37 @@ body:before{
     position: absolute;
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
+    align-items: center; 
+=======
     align-items: center;
-  
+    flex-wrap: wrap;
+>>>>>>> develop-Mafer
 }
 .register{
     max-width: 350px;
-    height: 400px;
+    height: 320px;
     border-radius: 2% 0% 0% 2%;
-   
 }
+
 
 .information{
     max-width: 350px;
-    height: 400px;
+    height: 320px;
     border-radius: 0% 2% 2% 0%;
     background-image: linear-gradient(to right, rgb(128, 187, 243), rgb(75, 163, 221));
     color: white;
     padding: 25px;
-    font-size: 30px;
+    font-size: 18px;
 }
 
 .tittle{
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
 }
 form{
-    padding-top: 50px;
-    
+    padding-top: 30px;
+    margin-top: 50px;
     display: grid;
     gap: 1.3em;
     width: 100%;
