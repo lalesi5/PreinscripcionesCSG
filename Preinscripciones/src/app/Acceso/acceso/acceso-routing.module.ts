@@ -21,12 +21,3 @@ const routes: Routes = [
     ]
 })
 export class AccesoRoutingModule{}
-
-
-
-
-
-
-
-
-
