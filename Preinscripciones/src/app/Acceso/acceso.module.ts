@@ -5,7 +5,7 @@ import { CommonModule } from "@angular/common";
 import { AccesoRoutingModule } from "./acceso-routing.module";
 
 //COMPONENTES
-import { LoginComponent } from "src/app/Login/login/login.component";
+import { LoginComponent } from "src/app/Login/login.component";
 
 
 @NgModule({

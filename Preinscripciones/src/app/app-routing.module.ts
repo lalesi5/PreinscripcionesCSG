@@ -6,11 +6,11 @@ const routes: Routes = [
 
   {
     path: 'acceso',
-    loadChildren: () => import ('src/app/Acceso/acceso/acceso.module').then(m => m.AccesoModule)
+    loadChildren: () => import ('src/app/Acceso/acceso.module').then(m => m.AccesoModule)
   },
   {
     path: 'sistema',
-    loadChildren: () => import ("./Login/login/Sistema/sistema/sistema.module").then(m => m.SistemaModule)
+    loadChildren: () => import ('../app/Login/Sistema/sistema.module').then(m => m.SistemaModule)
   },
 
   {

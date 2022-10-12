@@ -3,8 +3,8 @@ import { Routes, RouterModule } from "@angular/router";
 
 //COMPONENTES
 import { EstudianteComponent } from "./Estudiante/estudiante.component";
-import { MadreComponent } from "./Madre/madre/madre.component";
-import { PadreComponent } from "./Padre/padre/padre.component";
+import { MadreComponent } from "./Madre/madre.component";
+import { PadreComponent } from "./Padre/padre.component";
 
 const routes: Routes = [
 {
