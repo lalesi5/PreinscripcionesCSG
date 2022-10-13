@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-
 
 @Component({
   selector: 'app-acceso',
@@ -10,15 +7,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AccesoComponent implements OnInit {
 
-
-  dataForm!:FormGroup
-
-  constructor(private formBuilder: FormBuilder) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.dataForm = this.formBuilder.group({
-     
-    });
   }
 
 }
