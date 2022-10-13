@@ -1,10 +1,9 @@
 import {NgModule} from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
+import {RouterModule, Routes} from '@angular/router';
 
 
 const routes: Routes = [
-  
+
   {path: '', redirectTo: 'acceso', pathMatch: 'full'},
 
   {
@@ -29,7 +28,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {useHash: true})
   ],
   exports: [
-    RouterModule [RouterModule]
+    RouterModule
   ]
 })
 export class AppRoutingModule {
