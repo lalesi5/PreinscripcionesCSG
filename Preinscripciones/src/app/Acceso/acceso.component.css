@@ -22,19 +22,15 @@ body:before{
     position: absolute;
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
-    align-items: center; 
-=======
     align-items: center;
     flex-wrap: wrap;
->>>>>>> develop-Mafer
 }
 .register{
     max-width: 350px;
     height: 320px;
     border-radius: 2% 0% 0% 2%;
-   
- 
+
+
 }
 
 

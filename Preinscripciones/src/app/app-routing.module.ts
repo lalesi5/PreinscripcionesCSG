@@ -11,8 +11,8 @@ const routes: Routes = [
     loadChildren: () => import('../app/Acceso/acceso.module').then(m => m.AccesoModule)
   },
   {
-    path: 'sistema',
-    loadChildren: () => import('../app/Login/Sistema/sistema.module').then(m => m.SistemaModule)
+    path: 'login',
+    loadChildren: () => import('../app/Login/login.module').then(m => m.LoginModule)
   },
 
   {
@@ -24,12 +24,8 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, {useHash: true})
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {
 }
