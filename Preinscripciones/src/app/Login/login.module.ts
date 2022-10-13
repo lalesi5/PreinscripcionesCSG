@@ -5,7 +5,7 @@ import { CommonModule } from "@angular/common";
 import { LoginRoutingModule } from "./login-routing.module";
 
 //COMPONENTES
-import { SistemaComponent } from "./Sistema/sistema/sistema.component";
+import { SistemaComponent } from "./Sistema/sistema.component";
 
 
 @NgModule({
@@ -14,6 +14,6 @@ import { SistemaComponent } from "./Sistema/sistema/sistema.component";
     ],
     imports: [CommonModule,
     LoginRoutingModule]
- 
+
 }) 
-  export class LoginModule{}
+export class LoginModule{}
