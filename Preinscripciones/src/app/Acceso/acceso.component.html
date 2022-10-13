@@ -11,16 +11,16 @@
         <mat-card class="register">
             <mat-card-title class="tittle">Registro de acceso al Sistema de Preinscripciones</mat-card-title> 
             <mat-card-content>
-                <form>      
+                <form (ngSubmit)="onSubmit()" [formGroup] ="dataForm">      
                     <mat-form-field appearance="fill">
                         <mat-label>Número de identificación</mat-label>
-                        <input matInput placeholder="1725542961" required>                
+                        <input class="form-control" id="cedula" name="cedula" formControlName="cedula" matInput placeholder="1725542961" required>                                    
                     </mat-form-field>
                     <mat-form-field appearance="fill">
                         <mat-label>Email</mat-label>
-                        <input matInput placeholder="pat@example.com" required>                
+                        <input matInput placeholder="pat@example.com" formControlName="email" required>               
                     </mat-form-field>
-                    <button id="botton1" mat-raised-button color="primary">Enviar</button>     
+                    <button type="submit" [disabled]="dataForm.invalid" id="botton1" mat-raised-button color="primary">Enviar</button>     
                 </form>
             </mat-card-content>
           </mat-card>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-acceso',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccesoComponent implements OnInit {
 
-  constructor() { }
+  dataForm!: FormGroup;
+  
+  constructor(private readonly fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.dataForm = this.initForm();
   }
+
+  onSubmit(): void {
+  console.log("envia credenciales");
+  }
+
+  initForm (): FormGroup{
+    return this.fb.group({
+      cedula: ['',[Validators.required]],
+      email: ['',[Validators.required]]
+    })
+  }
+
+
 
 }

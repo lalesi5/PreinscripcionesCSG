@@ -1,0 +1,68 @@
+body{
+    background-image: url("https://www.csgabriel.edu.ec/wp-content/uploads/2021/11/11.Estudianteseguros.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+body:before{
+    content: "";
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75));
+}
+
+.acceso{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    align-items: center;
+    flex-wrap: wrap;
+}
+.register{
+    width: 350px;
+    height: 320px;
+    border-radius: 2% 0% 0% 2%;
+   
+}
+
+
+.information{
+    width: 350px;
+    height: 320px;
+    border-radius: 0% 2% 2% 0%;
+    background-image: linear-gradient(to right, rgb(128, 187, 243), rgb(75, 163, 221));
+    color: white;
+    padding: 25px;
+    font-size: 18px;
+}
+
+.tittle{
+    font-size: 14px;
+    text-align: center;
+}
+form{
+    padding-top: 30px;
+    margin-top: 50px;
+    display: grid;
+    gap: 1.3em;
+    width: 100%;
+    height: 100%;
+}
+input{
+    width: 100%;
+}
+#botton1{
+    background-color: #218cd3;
+    color: white;
+    margin-left: 35%;
+    width: 30%;
+}

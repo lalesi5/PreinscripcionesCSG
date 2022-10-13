@@ -8,13 +8,11 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatIconModule} from "@angular/material/icon";
 import {MatCommonModule} from "@angular/material/core";
 import {MatButtonModule} from "@angular/material/button";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
-
+import { MatInputModule } from '@angular/material/input';
 //COMPONENTES
 import {AccesoComponent} from "./acceso.component";
-
-
 
 
 
@@ -31,7 +29,10 @@ import {AccesoComponent} from "./acceso.component";
     MatCommonModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
+    
   ],
   exports: [
     MatCardModule

@@ -8,7 +8,7 @@ body{
 body:before{
     content: "";
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -28,14 +28,15 @@ body:before{
     flex-wrap: wrap;
 }
 .register{
-    max-width: 350px;
+    width: 350px;
     height: 320px;
     border-radius: 2% 0% 0% 2%;
+   
 }
 
 
 .information{
-    max-width: 350px;
+    width: 350px;
     height: 320px;
     border-radius: 0% 2% 2% 0%;
     background-image: linear-gradient(to right, rgb(128, 187, 243), rgb(75, 163, 221));
@@ -62,6 +63,6 @@ input{
 #botton1{
     background-color: #218cd3;
     color: white;
-    margin-left: 30%;
+    margin-left: 35%;
     width: 30%;
 }
