@@ -2,24 +2,22 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 //MODULOS
-import { SistemaRoutingModule } from "./sistema-routing.module"; 
+import { SistemaRoutingModule } from "./sistema-routing.module";
 
 //COMPONENTES
 import { EstudianteComponent } from "./Estudiante/estudiante.component";
-import { PadreComponent } from "./Padre/padre.component";
-import { MadreComponent } from "./Madre/madre.component";
+import {RepresentanteComponent} from "./Representante/representante.component";
 
 
 @NgModule({
-  declarations: [ 
-    EstudianteComponent, 
-    PadreComponent,
-    MadreComponent
+  declarations: [
+    EstudianteComponent,
+    RepresentanteComponent
   ],
-    
+
     imports: [
       CommonModule,
       SistemaRoutingModule
 ]
-}) 
+})
   export class SistemaModule{}
