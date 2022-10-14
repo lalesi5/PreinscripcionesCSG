@@ -1,9 +1,18 @@
 body{
     background-image: url("https://www.csgabriel.edu.ec/wp-content/uploads/2022/05/02.ActoCivico-YoMeCuido.jpg");
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     background-attachment: fixed;
+}
+
+@media only screen and (max-width: 767px) {
+
+    body {
+    
+    background-image: url("https://www.csgabriel.edu.ec/wp-content/uploads/2022/05/02.ActoCivico-YoMeCuido.jpg");
+    
+    }
 }
 body:before{
     content: "";
