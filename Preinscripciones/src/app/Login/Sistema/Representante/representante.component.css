@@ -1,0 +1,64 @@
+/* NOMBRES Y APELLIDOS*/
+.informationParents {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+/*CEDULA O PASAPORTE */
+.inputCI {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+
+/* PARENTEZCO */
+.studentParent {
+  width: 100%;
+}
+
+.studentParent2 {
+  width: 25%;
+}
+
+
+/*TIPO DE IDENTIFICACION */
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+
+
+/* DIRECCION*/
+.addressParent{
+  width: 35%;
+}
+
+/*CIUDAD*/
+.cityParent{
+  width: 35%;
+}
+
+
+/* EMAIL DE CONTACTO*/
+.emailContactParent .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+
+}
+
+
+.wrapper-button{
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.w-100{
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
