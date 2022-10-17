@@ -14,21 +14,22 @@ import {HttpClientModule} from '@angular/common/http';
 //COMPONENTES
 import { SistemaComponent } from "../sistema.component";
 import {SistemaModule} from "../sistema.module";
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
     declarations: [
         SistemaComponent
     ],
     imports: [CommonModule,
-      EstudianteRoutingModule,
-      SistemaModule,
-      BrowserAnimationsModule,
-      NoopAnimationsModule,
-      BrowserModule,
-      FormsModule,
-      HttpClientModule,
-      MatNativeDateModule,
-      ReactiveFormsModule,
+        EstudianteRoutingModule,
+        SistemaModule,
+        BrowserAnimationsModule,
+        NoopAnimationsModule,
+        BrowserModule,
+        FormsModule,
+        HttpClientModule,
+        MatNativeDateModule,
+        ReactiveFormsModule, MatTabsModule,
     ],
   providers: [],
   bootstrap: [SistemaComponent]

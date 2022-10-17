@@ -1,10 +1,41 @@
-<h1>Rutas</h1>
-<ul>
-  <li><a routerLink="/acceso/login">Login</a></li>
-</ul>
+<mat-stepper #stepper>
+  <mat-step>
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <div>
+        <p>Go to a different step to see the error state</p>
 
-<ul>
-  <li><a routerLink="/sistema/estudiante">Estudiante</a></li>
-  <li><a routerLink="/sistema/representante">Representante</a></li>
-</ul>
-<p>Ya vale Feeeeeeeeeeeeer</p>
+        <button routerLink="/sistema/estudiante" mat-button matStepperNext>Next </button>
+
+
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Fill out your address</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl"
+               required>
+      </mat-form-field>
+      <div>
+        <p>Go to a different step to see the error state</p>
+        <button mat-button matStepperPrevious>Back</button>
+        <button routerLink="/sistema/representante"mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Finalizar</ng-template>
+    <p>Estudiante Inscrito.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>

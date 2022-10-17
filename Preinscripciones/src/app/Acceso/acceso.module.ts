@@ -1,9 +1,9 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
+
 //MODULOS
 import { AccesoRoutingModule } from "./acceso-routing.module";
-
 
 //COMPONENTES
 
@@ -15,6 +15,7 @@ import { AccesoRoutingModule } from "./acceso-routing.module";
     ],
     imports: [CommonModule,
     AccesoRoutingModule,
+
 
     ]
 

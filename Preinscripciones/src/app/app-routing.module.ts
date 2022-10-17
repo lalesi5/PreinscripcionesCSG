@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {AccesoComponent} from "./Acceso/acceso.component";
 import {LoginComponent} from "./Login/login.component";
-import {SistemaComponent} from "./Login/Sistema/sistema.component";
 
 
 
