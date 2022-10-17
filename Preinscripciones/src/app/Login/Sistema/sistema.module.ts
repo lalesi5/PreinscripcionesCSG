@@ -58,11 +58,13 @@ import {DialogModule} from '@angular/cdk/dialog';
 import { EstudianteComponent } from "./Estudiante/estudiante.component";
 import {RepresentanteComponent} from "./Representante/representante.component";
 import {ReactiveFormsModule} from "@angular/forms";
+import {SistemaComponent} from "./sistema.component";
 
 
 
 @NgModule({
   declarations: [
+    SistemaComponent,
     EstudianteComponent,
     RepresentanteComponent
   ],

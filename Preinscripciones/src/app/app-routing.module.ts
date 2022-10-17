@@ -13,10 +13,9 @@ const routes: Routes = [
   {path: 'acceso', component: AccesoComponent},
   {path: 'login', component: LoginComponent},
 
-  {path: 'sistema', component: SistemaComponent},
+  {path: 'sistema', loadChildren: () => import('../app/Login/Sistema/sistema.module').then(m => m.SistemaModule)},
 
-  //{path: 'sistema', loadChildren: () => import('../app/Login/Sistema/sistema.module').then(m => m.SistemaModule)},
-  {path: '**', redirectTo: 'acceso'}
+  {path: '**', redirectTo: 'sistema'}
 
 ];
 
