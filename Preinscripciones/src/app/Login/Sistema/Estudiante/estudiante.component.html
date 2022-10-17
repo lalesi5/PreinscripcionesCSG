@@ -1,1 +1,229 @@
-<p>SIIIIIIIIIIIIUUUUUUUUUUUUUUUUUU</p>
+
+
+
+
+<form class="Student">
+  <mat-form-field class="informationStudent" appearance="fill">
+    <mat-label>Company (disabled)</mat-label>
+    <input matInput disabled value="Google">
+  </mat-form-field>
+
+
+  <! ––«***********NOMBRES Y APELLIDOS***************«––>
+
+  <h4> INFORMACION DEL ESTUDIANTE </h4>
+
+  <table class="informationStudent" cellspacing="0"><tr>
+    <td><mat-form-field class="informationStudent" appearance="fill">
+      <mat-label>Apellido1 Apellido2</mat-label>
+      <input matInput>
+    </mat-form-field></td>
+    <td><mat-form-field class="informationStudent" appearance="fill">
+      <mat-label>Nombre1 Nombre2</mat-label>
+      <input matInput>
+    </mat-form-field></td>
+  </tr></table>
+
+
+  <! ––«***********FECHA DE NACIMIENTO***************«––>
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha De Nacimiento</mat-label>
+    <!-- #docregion toggle -->
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <!-- #enddocregion toggle -->
+  </mat-form-field>
+
+
+  <! ––«***********CON QUIENES VIVE***************«––>
+  <p>
+    <mat-form-field class="informationStudent" appearance="fill">
+      <mat-label>¿Con Quién Vive?</mat-label>
+      <textarea matInput placeholder="Padre/Madre/Hermanos/Abuelos"></textarea>
+    </mat-form-field>
+  </p>
+
+    <! ––«***********Email CONTACTO***************«––>
+
+  <h4> MAIL DE CONTACTO </h4>
+
+  <div class="emailContact">
+    <mat-form-field appearance="fill">
+      <mat-label>Email de Contacto</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div>
+
+
+  <! ––«***********TIPO DE IDENTIFICACIÓN***************«––>
+
+  <h4> TIPO DE IDENTIFICACION </h4>
+
+  <mat-radio-group aria-label="Seleccione el tipo de Identificación">
+    <mat-radio-button value="1">Cedula</mat-radio-button>
+    <mat-radio-button value="2">Pasaporte</mat-radio-button>
+  </mat-radio-group>
+
+  <form class="inputCI">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Numero de Identificación</mat-label>
+      <input matInput placeholder="Ex. 1723885826" value="">
+    </mat-form-field>
+  </form>
+
+
+  <! ––«***********NIVEL AL QUE APLICA***************«––>
+  <h4> NIVEL DEL ESTUDIANTE </h4>
+
+  <div class="levelAplication">
+  <h4>Nivel Al Que Aplica</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Niveles</mat-label>
+    <select matNativeControl required>
+      <option value=""> </option>
+      <option value="INICIAL 2 (3 AÑOS)">INICIAL 2 (3 AÑOS)</option>
+      <option value="INICIAL 2 (4 AÑOS)">INICIAL 2 (4 AÑOS)</option>
+      <option value="PRIMERO DE EDUCACIÓN BÁSICA">PRIMERO DE EDUCACIÓN BÁSICA</option>
+      <option value="SEGUNDO DE EDUCACIÓN BÁSICA">SEGUNDO DE EDUCACIÓN BÁSICA</option>
+      <option value="TERCERO DE EDUCACIÓN BÁSICA">TERCERO DE EDUCACIÓN BÁSICA</option>
+      <option value="CUARTO DE EDUCACIÓN BÁSICA">CUARTO DE EDUCACIÓN BÁSICA</option>
+      <option value="QUINTO DE EDUCACIÓN BÁSICA">QUINTO DE EDUCACIÓN BÁSICA</option>
+      <option value="SEXTO DE EDUCACIÓN BÁSICA">SEXTO DE EDUCACIÓN BÁSICA</option>
+      <option value="SEPTIMO DE EDUCACIÓN BÁSICA">SEPTIMO DE EDUCACIÓN BÁSICA</option>
+      <option value="OCTAVO DE EDUCACIÓN BÁSICA">OCTAVO DE EDUCACIÓN BÁSICA</option>
+      <option value="NOVENO DE EDUCACIÓN BÁSICA">NOVENO DE EDUCACIÓN BÁSICA</option>
+      <option value="DECIMO DE EDUCACIÓN BÁSICA">DECIMO DE EDUCACIÓN BÁSICA</option>
+      <option value="PRIMER CURSO DE BACHILLERATO EN CIENCIAS">PRIMER CURSO DE BACHILLERATO EN CIENCIAS</option>
+      <option value="SEGUNDO CURSO DE BACHILLERATO EN CIENCIAS">SEGUNDO CURSO DE BACHILLERATO EN CIENCIAS</option>
+      <option value="TERCER CURSO DE BACHILLERATO EN CIENCIAS">TERCER CURSO DE BACHILLERATO EN CIENCIAS</option>
+    </select>
+  </mat-form-field>
+  </div>
+
+  <! ––«***********INSTITUCIÓN DE PROCEDENCIA***************«––>
+  <h4> FORMACION DEL ESTUDIANTE </h4>
+
+  <p>
+    <mat-form-field class="informationInstitution" appearance="fill">
+      <mat-label>INSTITUCIÓN DE PROCEDENCIA</mat-label>
+      <textarea matInput placeholder=" "></textarea>
+    </mat-form-field>
+  </p>
+
+  <! ––«***********HIJO DE EX-ALUMNO***************«––>
+
+  <h4> INFORMACION PARENTAL </h4>
+
+  <div class="ex-alumnoChild">
+    <h4>El estudiante es hijo de un Ex-Alumno?</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Escoja su respuesta</mat-label>
+      <select matNativeControl required>
+        <option value="NO">NO</option>
+        <option value="SI">SI</option>
+      </select>
+    </mat-form-field>
+  </div>
+  <! ––«***********HIJO DE EX-ALUMNO2***************«––>
+  <p>
+  <h4>Si la respuesta fue "SI" llene la siguiente información</h4>
+
+    <mat-form-field class="ex-alumnoChild2" appearance="fill">
+      <mat-label>Datos del Ex-Alumno</mat-label>
+      <textarea matInput placeholder=" "></textarea>
+    </mat-form-field>
+
+  <! ––«***********FAMILIARES EN LA INSTITUCION***************«––>
+
+
+
+  <! ––«***********HERMANOS EN LA INSTITUCION***************«––>
+  <div class="bro/sis">
+    <h4>Cuantos hermanos tiene el estudiante en la institucion?</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Escoja su respuesta</mat-label>
+      <select matNativeControl required>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+
+      </select>
+    </mat-form-field>
+  </div>
+
+  <! ––«***********PADRE/MADRE EN LA INSTITUCION***************«––>
+  <div class="dad/mom">
+    <h4>Su Padre/Madre trabaja actualmente en la institucion?</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Escoja su respuesta</mat-label>
+      <select matNativeControl required>
+        <option value="Ninguno">Ninguno</option>
+        <option value="PADRE">PADRE</option>
+        <option value="MADRE">MADRE</option>
+
+      </select>
+    </mat-form-field>
+  </div>
+
+  <! ––«***********DIRECCION***************«––>
+  <h4> DOMICILIO DEL ESTUDIANTE </h4>
+  <! ––«***********CIUDAD***************«––>
+  <p>
+    <mat-form-field class="city" appearance="fill">
+      <mat-label>CIUDAD</mat-label>
+      <textarea matInput placeholder=" "></textarea>
+    </mat-form-field>
+  </p>
+
+
+  <p>
+    <mat-form-field class="address" appearance="fill">
+      <mat-label>Direccion Exacta</mat-label>
+      <textarea matInput placeholder=" "></textarea>
+    </mat-form-field>
+  </p>
+
+
+  <! ––«****************CONTACTOS*******************«––>
+  <h4> NUMEROS DE CONTACTO </h4>
+
+  <! ––«***********Telefono1***************«––>
+
+  <form class="phone1">
+    <mat-form-field class="Numero de Contacto1" appearance="fill">
+      <mat-label>Celular 1</mat-label>
+      <span matPrefix>+593 &nbsp;</span>
+      <input type="tel" matInput placeholder="098-027-5610">
+      <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+  </form>
+
+  <! ––«***********Telefono2***************«––>
+  <form class="phone2">
+    <mat-form-field class="Numero de Contacto2" appearance="fill">
+      <mat-label>Celular 2</mat-label>
+      <span matPrefix>+593 &nbsp;</span>
+      <input type="tel" matInput placeholder="098-027-5610">
+      <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+  </form>
+
+
+  <! ––«***********IMAGEN CEDULA***************«––>
+
+
+
+
+
+
+
+  <! ––«***********IMAGEN LIBRETA***************«––>
+
+
+</form>
+
