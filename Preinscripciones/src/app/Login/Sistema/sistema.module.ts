@@ -58,7 +58,6 @@ import {DialogModule} from '@angular/cdk/dialog';
 import { EstudianteComponent } from "./Estudiante/estudiante.component";
 import {RepresentanteComponent} from "./Representante/representante.component";
 import {ReactiveFormsModule} from "@angular/forms";
-import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-browser/animations";
 
 
 
@@ -121,9 +120,10 @@ import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-b
     ScrollingModule,
     DialogModule,
     ReactiveFormsModule,
+
     //MODULOS DE PRUEBA
 
 
-  ],
+  ]
 })
   export class SistemaModule{}

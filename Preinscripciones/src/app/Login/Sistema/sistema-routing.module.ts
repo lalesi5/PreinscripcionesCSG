@@ -8,6 +8,7 @@ import { RepresentanteComponent} from "./Representante/representante.component";
 const routes: Routes = [
 {
   path: '',
+
   children:[
     { path:'estudiante', component: EstudianteComponent},
     { path:'representante', component: RepresentanteComponent},

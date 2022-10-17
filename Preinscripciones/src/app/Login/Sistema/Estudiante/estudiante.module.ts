@@ -31,7 +31,7 @@ import {SistemaModule} from "../sistema.module";
       ReactiveFormsModule,
     ],
   providers: [],
-  bootstrap: [SistemaComponent],
+  bootstrap: [SistemaComponent]
 
 })
   export class EstudianteModule{}

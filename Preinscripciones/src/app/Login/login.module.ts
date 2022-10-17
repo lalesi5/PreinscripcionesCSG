@@ -15,5 +15,5 @@ import { SistemaComponent } from "./Sistema/sistema.component";
     imports: [CommonModule,
     LoginRoutingModule]
 
-}) 
+})
 export class LoginModule{}

@@ -4,16 +4,21 @@ import { CommonModule } from "@angular/common";
 //MODULOS
 import { AccesoRoutingModule } from "./acceso-routing.module";
 
+
 //COMPONENTES
-import { LoginComponent } from "src/app/Login/login.component";
+
 
 
 @NgModule({
     declarations: [
-        LoginComponent
+
     ],
     imports: [CommonModule,
-    AccesoRoutingModule]
+    AccesoRoutingModule,
 
-}) 
+
+
+    ]
+
+})
   export class AccesoModule{}
