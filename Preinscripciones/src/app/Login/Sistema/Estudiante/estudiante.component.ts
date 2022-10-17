@@ -13,6 +13,7 @@ interface Food {
 })
 export class EstudianteComponent implements OnInit {
 
+
   email = new FormControl('', [Validators.required, Validators.email]);
   foods: Food[] = [
     {value: 'steak-0', viewValue: 'Steak'},
@@ -32,6 +33,7 @@ export class EstudianteComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }
 

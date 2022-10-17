@@ -4,7 +4,7 @@ import { CommonModule } from "@angular/common";
 //MODULOS
 import { EstudianteRoutingModule } from "./estudiante-routing.module";
 import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
@@ -20,14 +20,15 @@ import {SistemaModule} from "../sistema.module";
         SistemaComponent
     ],
     imports: [CommonModule,
-    EstudianteRoutingModule,
+      EstudianteRoutingModule,
       SistemaModule,
       BrowserAnimationsModule,
+      NoopAnimationsModule,
       BrowserModule,
       FormsModule,
       HttpClientModule,
       MatNativeDateModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
     ],
   providers: [],
   bootstrap: [SistemaComponent],
