@@ -1,3 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>estudiante</title>
+</head>
+
+
+
+<body>
 
 <form class="Student">
   <mat-form-field class="informationStudent" appearance="fill">
@@ -13,11 +26,19 @@
   <table class="informationStudent" cellspacing="0"><tr>
     <td><mat-form-field class="informationStudent" appearance="fill">
       <mat-label>Apellido1 Apellido2</mat-label>
-      <input matInput>
+      <input matInput [formControl]="lastName" required>
+      <mat-error *ngIf="this.lastName">{{getErrorMessage()}}
+
+      </mat-error>
+
+
     </mat-form-field></td>
     <td><mat-form-field class="informationStudent" appearance="fill">
       <mat-label>Nombre1 Nombre2</mat-label>
-      <input matInput>
+      <input matInput [formControl]="name" required>
+      <mat-error *ngIf="this.name">{{getErrorMessage()}}
+
+      </mat-error>
     </mat-form-field></td>
   </tr></table>
 
@@ -42,18 +63,6 @@
     </mat-form-field>
   </p>
 
-    <! ––«***********Email CONTACTO***************«––>
-
-  <h4> MAIL DE CONTACTO </h4>
-
-  <div class="emailContact">
-    <mat-form-field appearance="fill">
-      <mat-label>Email de Contacto</mat-label>
-      <input matInput placeholder="pat@example.com" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
-  </div>
-
 
   <! ––«***********TIPO DE IDENTIFICACIÓN***************«––>
 
@@ -76,28 +85,28 @@
   <h4> NIVEL DEL ESTUDIANTE </h4>
 
   <div class="levelAplication">
-  <h4>Nivel Al Que Aplica</h4>
-  <mat-form-field appearance="fill">
-    <mat-label>Niveles</mat-label>
-    <select matNativeControl required>
-      <option value=""> </option>
-      <option value="INICIAL 2 (3 AÑOS)">INICIAL 2 (3 AÑOS)</option>
-      <option value="INICIAL 2 (4 AÑOS)">INICIAL 2 (4 AÑOS)</option>
-      <option value="PRIMERO DE EDUCACIÓN BÁSICA">PRIMERO DE EDUCACIÓN BÁSICA</option>
-      <option value="SEGUNDO DE EDUCACIÓN BÁSICA">SEGUNDO DE EDUCACIÓN BÁSICA</option>
-      <option value="TERCERO DE EDUCACIÓN BÁSICA">TERCERO DE EDUCACIÓN BÁSICA</option>
-      <option value="CUARTO DE EDUCACIÓN BÁSICA">CUARTO DE EDUCACIÓN BÁSICA</option>
-      <option value="QUINTO DE EDUCACIÓN BÁSICA">QUINTO DE EDUCACIÓN BÁSICA</option>
-      <option value="SEXTO DE EDUCACIÓN BÁSICA">SEXTO DE EDUCACIÓN BÁSICA</option>
-      <option value="SEPTIMO DE EDUCACIÓN BÁSICA">SEPTIMO DE EDUCACIÓN BÁSICA</option>
-      <option value="OCTAVO DE EDUCACIÓN BÁSICA">OCTAVO DE EDUCACIÓN BÁSICA</option>
-      <option value="NOVENO DE EDUCACIÓN BÁSICA">NOVENO DE EDUCACIÓN BÁSICA</option>
-      <option value="DECIMO DE EDUCACIÓN BÁSICA">DECIMO DE EDUCACIÓN BÁSICA</option>
-      <option value="PRIMER CURSO DE BACHILLERATO EN CIENCIAS">PRIMER CURSO DE BACHILLERATO EN CIENCIAS</option>
-      <option value="SEGUNDO CURSO DE BACHILLERATO EN CIENCIAS">SEGUNDO CURSO DE BACHILLERATO EN CIENCIAS</option>
-      <option value="TERCER CURSO DE BACHILLERATO EN CIENCIAS">TERCER CURSO DE BACHILLERATO EN CIENCIAS</option>
-    </select>
-  </mat-form-field>
+    <h4>Nivel Al Que Aplica</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Niveles</mat-label>
+      <select matNativeControl required>
+        <option value=""> </option>
+        <option value="INICIAL 2 (3 AÑOS)">INICIAL 2 (3 AÑOS)</option>
+        <option value="INICIAL 2 (4 AÑOS)">INICIAL 2 (4 AÑOS)</option>
+        <option value="PRIMERO DE EDUCACIÓN BÁSICA">PRIMERO DE EDUCACIÓN BÁSICA</option>
+        <option value="SEGUNDO DE EDUCACIÓN BÁSICA">SEGUNDO DE EDUCACIÓN BÁSICA</option>
+        <option value="TERCERO DE EDUCACIÓN BÁSICA">TERCERO DE EDUCACIÓN BÁSICA</option>
+        <option value="CUARTO DE EDUCACIÓN BÁSICA">CUARTO DE EDUCACIÓN BÁSICA</option>
+        <option value="QUINTO DE EDUCACIÓN BÁSICA">QUINTO DE EDUCACIÓN BÁSICA</option>
+        <option value="SEXTO DE EDUCACIÓN BÁSICA">SEXTO DE EDUCACIÓN BÁSICA</option>
+        <option value="SEPTIMO DE EDUCACIÓN BÁSICA">SEPTIMO DE EDUCACIÓN BÁSICA</option>
+        <option value="OCTAVO DE EDUCACIÓN BÁSICA">OCTAVO DE EDUCACIÓN BÁSICA</option>
+        <option value="NOVENO DE EDUCACIÓN BÁSICA">NOVENO DE EDUCACIÓN BÁSICA</option>
+        <option value="DECIMO DE EDUCACIÓN BÁSICA">DECIMO DE EDUCACIÓN BÁSICA</option>
+        <option value="PRIMER CURSO DE BACHILLERATO EN CIENCIAS">PRIMER CURSO DE BACHILLERATO EN CIENCIAS</option>
+        <option value="SEGUNDO CURSO DE BACHILLERATO EN CIENCIAS">SEGUNDO CURSO DE BACHILLERATO EN CIENCIAS</option>
+        <option value="TERCER CURSO DE BACHILLERATO EN CIENCIAS">TERCER CURSO DE BACHILLERATO EN CIENCIAS</option>
+      </select>
+    </mat-form-field>
   </div>
 
   <! ––«***********INSTITUCIÓN DE PROCEDENCIA***************«––>
@@ -128,10 +137,10 @@
   <p>
   <h4>Si la respuesta fue "SI" llene la siguiente información</h4>
 
-    <mat-form-field class="ex-alumnoChild2" appearance="fill">
-      <mat-label>Datos del Ex-Alumno</mat-label>
-      <textarea matInput placeholder=" "></textarea>
-    </mat-form-field>
+  <mat-form-field class="ex-alumnoChild2" appearance="fill">
+    <mat-label>Datos del Ex-Alumno</mat-label>
+    <textarea matInput placeholder=" "></textarea>
+  </mat-form-field>
 
   <! ––«***********FAMILIARES EN LA INSTITUCION***************«––>
 
@@ -217,22 +226,22 @@
   <h4> Cargar imagen o PDF de cédula del aspirante </h4>
 
   <div>
-  <input type="file" >
-</div>
-
-
-
+    <input type="file" >
+  </div>
 
   <! ––«***********IMAGEN LIBRETA***************«––>
   <h4>Cargar imagen libreta (aplica 1ro de básica en adelante)</h4>
-
-
   <div>
     <input type="file" >
   </div>
 
-
-
-
 </form>
+
+
+
+</body>
+</html>
+
+
+
 

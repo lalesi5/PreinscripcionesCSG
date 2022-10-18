@@ -2,27 +2,21 @@
   <mat-step>
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>INFORMACIÓN</ng-template>
-      <mat-form-field appearance="fill">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
+
             <div>
-        <p>Go to a different step to see the error state</p>
+        <p></p>
         <button mat-button matStepperNext >Siguiente</button>
       </div>
+
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+  <mat-step [stepControl]="secondFormGroup" errorMessage="Llenar todos los campos.">
     <form  [formGroup]="secondFormGroup">
       <ng-template  matStepLabel>ESTUDIANTE</ng-template>
-      <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label>
-        <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl"
-               required>
-      </mat-form-field>
+
       <div>
-        <p>Go to a different step to see the error state</p>
-        class= "estudiante">
+
+        <!COMPONENTE ESTUDIANTE>
         <app-estudiante></app-estudiante>
         <button  mat-button matStepperPrevious>Atrás</button>
         <button mat-button matStepperNext>Siguiente</button>
@@ -31,8 +25,9 @@
   </mat-step>
   <mat-step>
     <ng-template matStepLabel>REPRESENTANTE</ng-template>
-    <p>INFORMACION DEL REPRESENTANTE</p>
-    class= "representante">
+
+    <!COMPONENTE REPRESENTANTE>
+
     <app-representante></app-representante>
     <div>
       <button mat-button matStepperPrevious>Atrás</button>
@@ -48,7 +43,5 @@
       <button mat-button (click)="stepper.reset()">Inscribir Nuevo Estudiante</button>
     </div>
   </mat-step>
-
-
 
 </mat-stepper>

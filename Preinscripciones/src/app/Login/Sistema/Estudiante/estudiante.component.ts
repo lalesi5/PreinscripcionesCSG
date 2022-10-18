@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
-import {NavigationExtras, Router} from "@angular/router";
 
 interface Food {
   value: string;
@@ -13,31 +12,53 @@ interface Food {
   styleUrls: ['./estudiante.component.css']
 })
 export class EstudianteComponent implements OnInit {
+  resultado!: string;
+
+  //ERROR DE APELLIDOS
+  lastName = new FormControl({
+    lastName: new FormControl('', [Validators.required, Validators.minLength(100)]),});
 
 
-  email = new FormControl('', [Validators.required, Validators.email]);
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'},
+  //ERROR DE NOMBRE
+  name = new FormControl({
+    name: new FormControl('', [Validators.required, Validators.minLength(100)]),});
 
-
-  ]
+  /*ERROR DE EMAIL
+  email = new FormControl('', [Validators.required, Validators.email]);*/
 
 
 
   getErrorMessage() {
-    if (this.email.hasError('required')) {
+
+    //MENSAJE ERROR APELLIDOS
+    if (this.lastName.hasError('required')) {
+      return 'No dejar campos vacios';
+    }
+    return this.lastName.hasError('required') ? 'Espacio Vacio' : '';
+
+
+    //MENSAJE ERROR NOMRBES
+    if (this.name.hasError('required')) {
+      return 'No dejar campos vacios';
+    }
+    return this.name.hasError('required') ? 'Espacio Vacio' : '';
+
+
+    //MENSAJE ERROR EMAIL
+   /* if (this.email.hasError('required')) {
       return 'You must enter a value';
     }
+    return this.email.hasError('email') ? 'Not a valid email' : '';*/
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+
+
   }
 
   ngOnInit(): void {
   }
 
 }
+
 
 
 

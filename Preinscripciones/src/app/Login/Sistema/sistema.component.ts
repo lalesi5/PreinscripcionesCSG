@@ -14,6 +14,7 @@ import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
   ],
 })
 export class SistemaComponent implements OnInit {
+
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });
