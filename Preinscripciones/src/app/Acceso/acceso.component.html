@@ -12,15 +12,15 @@
             <mat-card-title class="tittle">Registro de acceso al Sistema de Preinscripciones</mat-card-title> 
             <mat-card-content>
                 <form (ngSubmit)="onSubmit()" [formGroup] ="dataForm">      
-                    <mat-form-field appearance="fill">
+                    <mat-form-field class="ancho" appearance="fill">
                         <mat-label>Número de identificación</mat-label>
-                        <input class="form-control" id="cedula" name="cedula" formControlName="cedula" matInput placeholder="1725542961" required>                                    
+                        <input type="text" id="cedula" name="cedula" formControlName="cedula" matInput placeholder="1725542961" required>                                    
                     </mat-form-field>
-                    <mat-form-field appearance="fill">
+                    <mat-form-field class="ancho" appearance="fill">
                         <mat-label>Email</mat-label>
-                        <input matInput placeholder="pat@example.com" formControlName="email" required>               
+                        <input matInput type="email" placeholder="pat@example.com" formControlName="email" required>               
                     </mat-form-field>
-                    <button type="submit" [disabled]="dataForm.invalid" id="botton1" mat-raised-button color="primary">Enviar</button>     
+                    <button type="submit" class="ancho" [disabled]="dataForm.invalid" id="botton1" mat-raised-button color="primary">Enviar</button>     
                 </form>
             </mat-card-content>
           </mat-card>
@@ -29,7 +29,8 @@
                 <p>
                     Estimado Representante.
                     El proceso es únicamente para nuevos aspirantes a los niveles de Primero de Básica hasta Primero de Bachillerato. 
-                    Debe registrarse en el sistema con el número de cédula del/la aspirante y un correo electrónico válido del/la representante. Inmediatamente recibirá, en el correo registrado, las instrucciones para continuar. 
+                    Debe registrarse en el sistema con el número de cédula del/la aspirante y un correo electrónico válido del/la representante. 
+                    <br>Inmediatamente recibirá, en el correo registrado, las instrucciones para continuar. 
                     Recuerde revisar el buzón de Spam o correo No Deseado.
                     Si necesita soporte, por favor comuníquese al correo tecnologias@csgabriel.edu.ec
                     Saludos cordiales.

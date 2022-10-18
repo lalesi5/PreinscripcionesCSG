@@ -8,24 +8,24 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class AccesoComponent implements OnInit {
 
-  dataForm!: FormGroup;
+  dataForm: FormGroup;
   
-  constructor(private readonly fb: FormBuilder) { }
+  constructor(private readonly fb: FormBuilder) {
+    this.dataForm = this.fb.group({
+      cedula: ['',[Validators.required]],
+      email: ['',[Validators.required]]
+    })
+   }
 
   ngOnInit(): void {
-    this.dataForm = this.initForm();
+
   }
 
   onSubmit(): void {
   console.log("envia credenciales");
   }
 
-  initForm (): FormGroup{
-    return this.fb.group({
-      cedula: ['',[Validators.required]],
-      email: ['',[Validators.required]]
-    })
-  }
+  
 
 
 

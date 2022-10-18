@@ -3,16 +3,14 @@ import { Routes, RouterModule } from "@angular/router";
 
 //COMPONENTES
 import { EstudianteComponent } from "./Estudiante/estudiante.component";
-import { MadreComponent } from "./Madre/madre.component";
-import { PadreComponent } from "./Padre/padre.component";
+import { RepresentanteComponent} from "./Representante/representante.component";
 
 const routes: Routes = [
 {
   path: '',
   children:[
     { path:'estudiante', component: EstudianteComponent},
-    { path:'padre', component: PadreComponent},
-    { path:'madre', component: MadreComponent},
+    { path:'representante', component: RepresentanteComponent},
     { path:'**', redirectTo:'estudiante' },
   ]
 }

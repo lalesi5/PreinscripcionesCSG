@@ -1,0 +1,91 @@
+/* NOMBRES Y APELLIDOS*/
+.Student {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+/* CON QUIENES VIVE */
+.informationStudent {
+  width: 100%;
+}
+
+
+/* EMAIL DE CONTACTO*/
+.emailContact .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+
+}
+
+
+/*TIPO DE IDENTIFICACION */
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+
+/*CEDULA O PASAPORTE */
+.inputCI {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+/* NIVEL AL QUE APLICA*/
+.levelAplication{
+width: 100%;
+}
+
+
+/* INSTITUCIÓN DE PROCEDENCIA*/
+.informationInstitution {
+  width: 100%;
+}
+
+
+
+/* HIJO DE EX ALUMNO*/
+.ex-alumnoChild{
+  width: 100%;
+}
+
+.ex-alumnoChild2{
+  width: 100%;
+}
+
+
+/* DIRECCION*/
+.address{
+  width: 100%;
+}
+
+/*CIUDAD*/
+.city{
+  width: 100%;
+}
+
+/*  SUBIR IMAGEN  */
+
+
+.wrapper-button{
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.w-100{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+td {
+  padding-right: 8px;
+}
