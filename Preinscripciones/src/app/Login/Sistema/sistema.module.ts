@@ -68,6 +68,10 @@ import {SistemaComponent} from "./sistema.component";
     EstudianteComponent,
     RepresentanteComponent
   ],
+  exports: [
+    EstudianteComponent,
+    RepresentanteComponent
+  ],
 
   imports: [
     CommonModule,

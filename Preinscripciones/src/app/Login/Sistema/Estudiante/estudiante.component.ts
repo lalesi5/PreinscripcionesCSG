@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
+import {NavigationExtras, Router} from "@angular/router";
 
 interface Food {
   value: string;
@@ -23,6 +24,8 @@ export class EstudianteComponent implements OnInit {
 
   ]
 
+
+
   getErrorMessage() {
     if (this.email.hasError('required')) {
       return 'You must enter a value';
@@ -33,7 +36,6 @@ export class EstudianteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 
 }
 

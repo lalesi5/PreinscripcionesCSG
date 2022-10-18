@@ -27,5 +27,3 @@ export class SistemaComponent implements OnInit {
   }
 
 }
-export class StepperErrorsExample {
-}

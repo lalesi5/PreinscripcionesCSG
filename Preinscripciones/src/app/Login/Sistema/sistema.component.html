@@ -1,20 +1,20 @@
 <mat-stepper #stepper>
   <mat-step>
     <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
+      <ng-template matStepLabel>INFORMACIÓN</ng-template>
       <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
         <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
       </mat-form-field>
-      <div>
+            <div>
         <p>Go to a different step to see the error state</p>
-        <button routerLink="/sistema/estudiante" mat-button matStepperNext>Next </button>
+        <button mat-button matStepperNext >Siguiente</button>
       </div>
     </form>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
-    <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
+    <form  [formGroup]="secondFormGroup">
+      <ng-template  matStepLabel>ESTUDIANTE</ng-template>
       <mat-form-field appearance="fill">
         <mat-label>Address</mat-label>
         <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl"
@@ -22,17 +22,33 @@
       </mat-form-field>
       <div>
         <p>Go to a different step to see the error state</p>
-        <button routerLink="/sistema/estudiante" mat-button matStepperPrevious>Back</button>
-        <button routerLink="/sistema/representante"mat-button matStepperNext>Next</button>
+        class= "estudiante">
+        <app-estudiante></app-estudiante>
+        <button  mat-button matStepperPrevious>Atrás</button>
+        <button mat-button matStepperNext>Siguiente</button>
       </div>
     </form>
   </mat-step>
   <mat-step>
-    <ng-template matStepLabel>Finalizar</ng-template>
+    <ng-template matStepLabel>REPRESENTANTE</ng-template>
+    <p>INFORMACION DEL REPRESENTANTE</p>
+    class= "representante">
+    <app-representante></app-representante>
+    <div>
+      <button mat-button matStepperPrevious>Atrás</button>
+      <button mat-button matStepperNext>Siguiente</button>
+    </div>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>FINALIZAR</ng-template>
     <p>Estudiante Inscrito.</p>
     <div>
       <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
+      <button mat-button (click)="stepper.reset()">Inscribir Nuevo Estudiante</button>
     </div>
   </mat-step>
+
+
+
 </mat-stepper>
