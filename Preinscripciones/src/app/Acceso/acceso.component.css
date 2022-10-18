@@ -1,14 +1,16 @@
 body{
+
     background-image: url("https://www.csgabriel.edu.ec/wp-content/uploads/2022/05/02.ActoCivico-YoMeCuido.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-   
+
 }
 
 
 body:before{
+
     content: "";
     width: 100%;
     height: 100%;
@@ -30,6 +32,17 @@ body:before{
     flex-wrap: wrap;
 }
 
+.acceso{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .register{
     width: 350px;
     height: 320px;
@@ -47,23 +60,24 @@ body:before{
 }
 
 .tittle{
-    font-size: 14px;
-    text-align: center;
+  font-size: 18px;
+  text-align: center;
 }
 form{
-    padding-top: 30px;
-    margin-top: 50px;
-    display: grid;
-    gap: 1.3em;
-    width: 100%;
-    height: 100%;
+  padding-top: 50px;
+
+  display: grid;
+  gap: 1.3em;
+  width: 100%;
+  height: 100%;
 }
 input{
-    width: 100%;
+  width: 100%;
 }
 #botton1{
-    background-color: #218cd3;
-    color: white;
-    margin-left: 35%;
-    width: 30%;
+
+  background-color: #218cd3;
+  color: white;
+  margin-left: 30%;
+  width: 30%;
 }

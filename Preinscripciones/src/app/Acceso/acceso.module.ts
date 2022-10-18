@@ -1,6 +1,7 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 
+
 //MODULOS
 import {AccesoRoutingModule} from "./acceso-routing.module";
 import {MatCardModule} from "@angular/material/card";
@@ -12,32 +13,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import { MatInputModule } from '@angular/material/input';
 //COMPONENTES
-import {AccesoComponent} from "./acceso.component";
 
 
 
 @NgModule({
-  declarations: [
-    AccesoComponent
-  ],
-  imports: [
-    CommonModule,
-    AccesoRoutingModule,
-    MatCardModule,
-    MatDialogModule,
-    MatIconModule,
-    MatCommonModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule
-    
-  ],
-  exports: [
-    MatCardModule
-  ]
+    declarations: [
+        
+    ],
+    imports: [CommonModule,
+    AccesoRoutingModule]
 
-})
-export class AccesoModule {
-}
+}) 
+  export class AccesoModule{}

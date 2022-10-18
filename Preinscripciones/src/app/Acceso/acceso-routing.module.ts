@@ -2,16 +2,11 @@ import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 
 //COMPONENTES
-
+import { LoginComponent } from "src/app/Login/login.component";
 import {AccesoComponent} from "./acceso.component";
 
-const routesAccess: Routes = [
-  {
-    path: '', component: AccesoComponent, children:
-      [
-        { path: '', redirectTo: 'acceso',pathMatch: 'full'},
-      ]
-  }
+const routes: Routes = [
+
 ];
 
 @NgModule({
@@ -19,5 +14,4 @@ const routesAccess: Routes = [
 
   ]
 })
-export class AccesoRoutingModule {
-}
+export class AccesoRoutingModule{}

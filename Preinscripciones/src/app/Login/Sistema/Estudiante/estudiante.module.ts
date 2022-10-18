@@ -4,7 +4,7 @@ import { CommonModule } from "@angular/common";
 //MODULOS
 import { EstudianteRoutingModule } from "./estudiante-routing.module";
 import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
@@ -14,23 +14,28 @@ import {HttpClientModule} from '@angular/common/http';
 //COMPONENTES
 import { SistemaComponent } from "../sistema.component";
 import {SistemaModule} from "../sistema.module";
+import {MatTabsModule} from "@angular/material/tabs";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 
 @NgModule({
     declarations: [
         SistemaComponent
     ],
     imports: [CommonModule,
-    EstudianteRoutingModule,
-      SistemaModule,
-      BrowserAnimationsModule,
-      BrowserModule,
-      FormsModule,
-      HttpClientModule,
-      MatNativeDateModule,
-      ReactiveFormsModule
+        EstudianteRoutingModule,
+        SistemaModule,
+        BrowserAnimationsModule,
+        NoopAnimationsModule,
+        BrowserModule,
+        FormsModule,
+        HttpClientModule,
+        MatNativeDateModule,
+        ReactiveFormsModule, MatTabsModule,
+      RouterLinkActive,
+      RouterLink
     ],
   providers: [],
-  bootstrap: [SistemaComponent],
+  bootstrap: [SistemaComponent]
 
 })
   export class EstudianteModule{}

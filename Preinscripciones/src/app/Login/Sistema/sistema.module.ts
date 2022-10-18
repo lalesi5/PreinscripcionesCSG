@@ -58,11 +58,17 @@ import {DialogModule} from '@angular/cdk/dialog';
 import { EstudianteComponent } from "./Estudiante/estudiante.component";
 import {RepresentanteComponent} from "./Representante/representante.component";
 import {ReactiveFormsModule} from "@angular/forms";
+import {SistemaComponent} from "./sistema.component";
 
 
 
 @NgModule({
   declarations: [
+    SistemaComponent,
+    EstudianteComponent,
+    RepresentanteComponent
+  ],
+  exports: [
     EstudianteComponent,
 <<<<<<< HEAD
     PadreComponent,
@@ -130,9 +136,15 @@ import {ReactiveFormsModule} from "@angular/forms";
     ScrollingModule,
     DialogModule,
     ReactiveFormsModule,
+
     //MODULOS DE PRUEBA
 
+<<<<<<< HEAD
   ],
 >>>>>>> cf9822774bd50263156f24dfa7f2a762a8799aad
+=======
+
+  ]
+>>>>>>> 3089881721ee43388683072590059ba7da755ee0
 })
   export class SistemaModule{}

@@ -14,12 +14,12 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import { MatInputModule } from '@angular/material/input';
 //COMPONENTES
 import { SistemaComponent } from "./Sistema/sistema.component";
-import { LoginComponent } from "./login.component";
+
 
 @NgModule({
     declarations: [
-        SistemaComponent,
-        LoginComponent
+        SistemaComponent
+        
     ],
     imports: [
     CommonModule,
@@ -39,5 +39,5 @@ import { LoginComponent } from "./login.component";
         MatCardModule
     ]
 
-}) 
+})
 export class LoginModule{}

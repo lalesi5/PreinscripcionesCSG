@@ -1,1 +1,122 @@
-<p>SIIIIIUUUUUUUUUUUU</p>
+
+<h4> INFORMACION DEL REPRESENTANTE </h4>
+
+<table class="informationParents" cellspacing="0"><tr>
+  <td><mat-form-field class="informationParents" appearance="fill">
+    <mat-label>Apellido1 Apellido2</mat-label>
+    <input matInput>
+  </mat-form-field></td>
+  <td><mat-form-field class="informationParents" appearance="fill">
+    <mat-label>Nombre1 Nombre2</mat-label>
+    <input matInput>
+  </mat-form-field></td>
+</tr></table>
+
+
+
+
+<! ––«***********TIPO DE IDENTIFICACIÓN***************«––>
+
+<h4> TIPO DE IDENTIFICACION </h4>
+
+<mat-radio-group aria-label="Seleccione el tipo de Identificación">
+  <mat-radio-button value="1">Cedula</mat-radio-button>
+  <mat-radio-button value="2">Pasaporte</mat-radio-button>
+</mat-radio-group>
+
+<form class="inputCIParents">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Numero de Identificación</mat-label>
+    <input matInput placeholder="Ex. 1723885826" value="">
+  </mat-form-field>
+</form>
+
+
+
+<! ––«***********PARENTEZCO***************«––>
+
+
+<h4> PARENTEZCO CON EL ESTUDIANTE </h4>
+
+<div class="studentParent">
+  <h4>Seleccione una opcion</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Parentezco</mat-label>
+    <select matNativeControl required>
+      <option value=""> </option>
+      <option value="PADRE">PADRE</option>
+      <option value="MADRE">MADRE</option>
+      <option value="ABUEL@">ABUELO/A</option>
+      <option value="TI@">TIO/A</option>
+      <option value="otro">Otro..</option>
+    </select>
+  </mat-form-field>
+</div>
+
+<p>
+<h4>Si la respuesta fue "Otro" escriba su respuesta</h4>
+
+<mat-form-field class="studentParent2" appearance="fill">
+  <mat-label>Parentezco del Representante</mat-label>
+  <textarea matInput placeholder=" "></textarea>
+</mat-form-field>
+
+
+
+<! ––«***********DIRECCION***************«––>
+<h4> DOMICILIO DEL REPRESENTANTE </h4>
+<! ––«***********CIUDAD***************«––>
+<p>
+  <mat-form-field class="cityParent" appearance="fill">
+    <mat-label>CIUDAD</mat-label>
+    <textarea matInput placeholder=" "></textarea>
+  </mat-form-field>
+</p>
+
+
+<p>
+  <mat-form-field class="addressParent" appearance="fill">
+    <mat-label>Direccion Exacta</mat-label>
+    <textarea matInput placeholder=" "></textarea>
+  </mat-form-field>
+</p>
+
+
+<! ––«***********MAIL***************«––>
+
+<h4> MAIL DE CONTACTO </h4>
+
+<div class="emailContactParent">
+  <mat-form-field appearance="fill">
+    <mat-label>Email de Contacto</mat-label>
+    <input matInput placeholder="pat@example.com" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+</div>
+
+
+
+
+<! ––«****************CONTACTOS*******************«––>
+<h4> NUMEROS DE CONTACTO </h4>
+
+<! ––«***********Telefono1***************«––>
+
+<form class="phoneParent1">
+  <mat-form-field class="Numero de Contacto de Representante1" appearance="fill">
+    <mat-label>Telefono Convencional</mat-label>
+    <span matPrefix>"593"  &nbsp;</span>
+    <input type="tel" matInput placeholder="02-2828441">
+    <mat-icon matSuffix>mode_edit</mat-icon>
+  </mat-form-field>
+</form>
+
+<! ––«***********Telefono2***************«––>
+<form class="phoneParent2">
+  <mat-form-field class="Numero de Contacto de Representante1" appearance="fill">
+    <mat-label>Celular </mat-label>
+    <span matPrefix>+593 &nbsp;</span>
+    <input type="tel" matInput placeholder="098-027-5610">
+    <mat-icon matSuffix>mode_edit</mat-icon>
+  </mat-form-field>
+</form>
