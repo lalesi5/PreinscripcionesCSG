@@ -57,7 +57,7 @@ import {DialogModule} from '@angular/cdk/dialog';
 //COMPONENTES
 import { EstudianteComponent } from "./Estudiante/estudiante.component";
 import {RepresentanteComponent} from "./Representante/representante.component";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SistemaComponent} from "./sistema.component";
 
 
@@ -126,6 +126,7 @@ import {SistemaComponent} from "./sistema.component";
     ScrollingModule,
     DialogModule,
     ReactiveFormsModule,
+    FormsModule,
 
     //MODULOS DE PRUEBA
 

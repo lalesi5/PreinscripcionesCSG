@@ -16,6 +16,7 @@ import { SistemaComponent } from "../sistema.component";
 import {SistemaModule} from "../sistema.module";
 import {MatTabsModule} from "@angular/material/tabs";
 import {RouterLink, RouterLinkActive} from "@angular/router";
+import {MatRadioModule} from "@angular/material/radio";
 
 @NgModule({
     declarations: [
@@ -32,7 +33,8 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
         MatNativeDateModule,
         ReactiveFormsModule, MatTabsModule,
       RouterLinkActive,
-      RouterLink
+      RouterLink,
+      MatRadioModule
     ],
   providers: [],
   bootstrap: [SistemaComponent]

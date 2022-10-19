@@ -12,18 +12,21 @@ interface Food {
   styleUrls: ['./estudiante.component.css']
 })
 export class EstudianteComponent implements OnInit {
-  resultado!: string;
 
   //RADIO BUTTON
+  //favoriteSeason: string | undefined ;
+  //seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
+
+
+  myModel = 1;
 
 
   //ERROR DE APELLIDOS
-  //lastName = new FormControl({
+
     lastNameStudent = new FormControl('', [Validators.required]);
 
 
   //ERROR DE NOMBRE
-  //name = new FormControl({
     nameStudent = new FormControl('', Validators.required)
 
   /*ERROR DE EMAIL
