@@ -13,7 +13,7 @@
 
 <body>
 
-<form class="Representante">
+<form [formGroup]="representanteForm" class="Representantes">
   <mat-form-field class="informationRepresentante" appearance="fill">
     <mat-label></mat-label>
     <input matInput disabled value="">
@@ -171,6 +171,14 @@
     </mat-error>
 
   </mat-form-field>
+
+
+  <div></div>
+
+  <button id="button1" type="submit" mat-raised-button>Guardar</button>
+
+  <div></div>
+
 </form>
 
 

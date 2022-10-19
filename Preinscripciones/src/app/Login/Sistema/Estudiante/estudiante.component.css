@@ -7,15 +7,10 @@
 
 
 /* CON QUIENES VIVE */
-.informationStudent {
+.homeStudent {
+  min-width: 150px;
+  max-width: 500px;
   width: 100%;
-}
-
-
-/* EMAIL DE CONTACTO*/
-.emailContact .mat-form-field + .mat-form-field {
-  margin-left: 8px;
-
 }
 
 
@@ -26,7 +21,7 @@
 
 
 /*CEDULA O PASAPORTE */
-.inputCI {
+.inputStudentCI {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
@@ -41,6 +36,8 @@ width: 100%;
 
 /* INSTITUCIÓN DE PROCEDENCIA*/
 .informationInstitution {
+  min-width: 150px;
+  max-width: 500px;
   width: 100%;
 }
 
@@ -52,17 +49,23 @@ width: 100%;
 }
 
 .ex-alumnoChild2{
+  min-width: 150px;
+  max-width: 500px;
   width: 100%;
 }
 
 
 /* DIRECCION*/
-.address{
+.studentAddress{
+  min-width: 150px;
+  max-width: 500px;
   width: 100%;
 }
 
 /*CIUDAD*/
 .city{
+  min-width: 150px;
+  max-width: 500px;
   width: 100%;
 }
 

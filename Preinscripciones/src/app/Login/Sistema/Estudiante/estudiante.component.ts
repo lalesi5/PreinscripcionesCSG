@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 interface Food {
   value: string;
@@ -13,12 +13,11 @@ interface Food {
 })
 export class EstudianteComponent implements OnInit {
 
+  studentForm!: FormGroup;
+
   //RADIO BUTTON
   //favoriteSeason: string | undefined ;
   //seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
-
-
-  myModel = 1;
 
 
   //ERROR DE APELLIDOS
@@ -71,7 +70,8 @@ export class EstudianteComponent implements OnInit {
 
 
 
-
+constructor( private readonly student: FormBuilder) {
+}
 
   getErrorMessage() {
 
@@ -169,6 +169,68 @@ export class EstudianteComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+
+  initForm(): FormGroup {
+    return this.student.group ({
+
+
+      lastNameStudent :['', [Validators.required]],
+
+
+      //ERROR DE NOMBRE
+      nameStudent: ['', [Validators.required]],
+
+      /*ERROR DE EMAIL
+      email = new FormControl('', [Validators.required, Validators.email]);*/
+
+      //ERROR FECHA
+
+      dateStudent: ['', [Validators.required]],
+
+//ERROR CON QUINES VIVE
+
+      homeStudent: ['', [Validators.required]],
+
+//ERROR CON CI
+
+      studentCI: ['', [Validators.required]],
+
+//ERROR NIVEL AL QUE APLICA
+
+      studentLevel: ['', [Validators.required]],
+
+
+//ERROR INSTITUCION ANTERIOR
+
+      studentInstitution: ['', [Validators.required]],
+
+
+      //ERROR DIRECCION ESTUDIANTE
+
+      studentAddress: ['', [Validators.required]],
+
+//ERROR  CELULAR1 ESTUDIANTE
+      studentPhone1: ['', [Validators.required]],
+      studentPhone2: ['', [Validators.required]],
+
+//ERROR SUBIR CEDULA PDF
+
+      studentCIPDF: ['', [Validators.required]],
+      studentPDF: ['', [Validators.required]],
+
+
+
+
+
+
+
+
+
+
+
+    })
   }
 
 }

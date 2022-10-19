@@ -8,11 +8,9 @@
   <title>estudiante</title>
 </head>
 
-
-
 <body>
 
-<form class="Student">
+<form [formGroup]="studentForm" class="informationStudent">
   <mat-form-field class="informationStudent" appearance="fill">
     <mat-label></mat-label>
     <input matInput disabled value="">
@@ -23,8 +21,8 @@
 
   <h4> INFORMACION DEL ESTUDIANTE </h4>
 
-  <table class="informationStudent" cellspacing=""><tr>
-    <td><mat-form-field class="informationStudent" appearance="fill">
+
+    <td><mat-form-field class="studentName" appearance="fill">
       <mat-label>Apellido1 Apellido2</mat-label>
       <input matInput [formControl]="lastNameStudent" required>
       <mat-error *ngIf="this.lastNameStudent">{{getErrorMessage()}}
@@ -33,18 +31,20 @@
 
 
     </mat-form-field></td>
-    <td><mat-form-field class="informationStudent" appearance="fill">
+
+
+
+    <td><mat-form-field class="studentLastName" appearance="fill">
       <mat-label>Nombre1 Nombre2</mat-label>
       <input matInput [formControl]="nameStudent" required>
       <mat-error *ngIf="this.nameStudent">{{getErrorMessage()}}
 
       </mat-error>
     </mat-form-field></td>
-  </tr></table>
 
 
   <! ––«***********FECHA DE NACIMIENTO***************«––>
-  <mat-form-field appearance="fill">
+  <mat-form-field class="dateStudent"  appearance="fill">
     <mat-label>Fecha De Nacimiento</mat-label>
     <!-- #docregion toggle -->
     <input matInput  [formControl]="dateStudent" required  [matDatepicker]="picker">
@@ -61,7 +61,7 @@
 
   <! ––«***********CON QUIENES VIVE***************«––>
   <p>
-    <mat-form-field class="informationStudent" appearance="fill">
+    <mat-form-field class="homeStudent" appearance="fill">
       <mat-label>¿Con Quién Vive?</mat-label>
       <textarea matInput  [formControl]="homeStudent" required    placeholder="Padre/Madre/Hermanos/Abuelos"></textarea>
       <mat-error *ngIf="this.dateStudent">{{getErrorMessage()}}
@@ -92,20 +92,18 @@
 <!--[formControl]="studentCI" required  aria-label="Seleccione el tipo de Identificación"-->
   <form>
 
-  <mat-radio-group  labelPosition="before" [formControl]="studentCI" required  aria-label="Seleccione el tipo de Identificación" >
+  <mat-radio-group  class="buttonStudentCI" labelPosition="before" [formControl]="studentCI" required  aria-label="Seleccione el tipo de Identificación" >
 
       <mat-radio-button value="1">Cedula </mat-radio-button>
     <mat-radio-button value="2">Pasaporte </mat-radio-button>
 
   </mat-radio-group>
 
-
-
   </form>
 
 
   <form class="inputCI">
-    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-form-field  class="inputStudentCI" appearance="fill">
       <mat-label>Numero de Identificación</mat-label>
       <input matInput [formControl]="studentCI" required  placeholder="Ex. 1723885826" value="">
 
@@ -235,7 +233,7 @@
 
 
   <p>
-    <mat-form-field class="address" appearance="fill">
+    <mat-form-field class="studentAddress" appearance="fill">
       <mat-label>Direccion Exacta</mat-label>
       <textarea matInput matInput [formControl]="studentAddress" required placeholder=" "></textarea>
 
@@ -252,7 +250,7 @@
 
   <! ––«***********Telefono1***************«––>
 
-  <form class="phone1">
+  <form class="studentPhone1">
     <mat-form-field class="Numero de Contacto1" appearance="fill">
       <mat-label>Celular 1</mat-label>
       <span matPrefix>+593 &nbsp;</span>
@@ -267,7 +265,7 @@
   </form>
 
   <! ––«***********Telefono2***************«––>
-  <form class="phone2">
+  <form class="studentPhone2">
     <mat-form-field class="Numero de Contacto2" appearance="fill">
       <mat-label>Celular 2</mat-label>
       <span matPrefix>+593 &nbsp;</span>
@@ -304,7 +302,7 @@
     <mat-error *ngIf="this.studentPhone2">{{getErrorMessage()}}
 
     </mat-error>
-
+    <button id="button1" type="submit" mat-raised-button>Guardar</button>
   </div>
 
 </form>

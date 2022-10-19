@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 interface Food {
   value: string;
@@ -12,6 +12,9 @@ interface Food {
   styleUrls: ['./representante.component.css']
 })
 export class RepresentanteComponent implements OnInit {
+
+  representanteForm!: FormGroup;
+
 
   //ERROR DE APELLIDOS
   lastNameParent = new FormControl('', [Validators.required]);
@@ -43,6 +46,11 @@ export class RepresentanteComponent implements OnInit {
 //ERROR TELEFONOS DE CONTACTO
   parentsPhone1 = new FormControl('', [Validators.required]);
   parentsPhone2 = new FormControl('', [Validators.required]);
+
+
+
+  constructor( private readonly representante: FormBuilder) {
+  }
 
 
   getErrorMessage() {
@@ -104,47 +112,50 @@ export class RepresentanteComponent implements OnInit {
     return this.parentsPhone2.hasError('parentsPhone2') ? 'Espacio Vacio' : '';
 
 
-
-
-
-
-
-
-
-
-
-
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
   ngOnInit(): void {
   }
 
+  initForm(): FormGroup {
+    return this.representante.group({
+
+
+
+
+      //ERROR DE APELLIDOS
+      lastNameParent :['', [Validators.required]],
+
+
+      //ERROR DE NOMBRES
+      //name = new FormControl({
+      nameParent :['', [Validators.required]],
+
+
+      //ERROR DE EMAIL
+      email :['', [Validators.required]],
+
+//ERROR CEDULA
+
+      parentCI :['', [Validators.required]],
+
+
+//ERROR PARENTEZCO
+      familiar :['', [Validators.required]],
+
+
+
+//ERROR DIRECCION REPRESENTANTE
+
+      addressParent :['', [Validators.required]],
+
+
+//ERROR TELEFONOS DE CONTACTO
+      parentsPhone1 :['', [Validators.required]],
+      parentsPhone2 :['', [Validators.required]]
+
+    })
+  }
 }

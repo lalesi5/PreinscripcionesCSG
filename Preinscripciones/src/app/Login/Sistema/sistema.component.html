@@ -58,7 +58,7 @@
       <!COMPONENTE REPRESENTANTE>
           <div>
       <app-representante></app-representante>
-
+            <div></div>
         <button mat-button matStepperPrevious>Atrás</button>
         <button mat-button matStepperNext>Siguiente</button>
       </div>
@@ -68,6 +68,8 @@
     <mat-step>
       <ng-template matStepLabel>FINALIZAR</ng-template>
       <p>Estudiante Inscrito.</p>
+
+      <div></div>
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button (click)="stepper.reset()">Inscribir Nuevo Estudiante</button>
