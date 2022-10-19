@@ -15,11 +15,6 @@ export class EstudianteComponent implements OnInit {
 
   studentForm!: FormGroup;
 
-  //RADIO BUTTON
-  //favoriteSeason: string | undefined ;
-  //seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
-
-
   //ERROR DE APELLIDOS
 
     lastNameStudent = new FormControl('', [Validators.required]);
@@ -69,30 +64,39 @@ export class EstudianteComponent implements OnInit {
 
 
 
+  toppings = this.student.group({
+    padre: false,
+    madre: false,
+    hermanos: false,
+    abuelos: false,
+    tios: false,
+  });
+
 
 constructor( private readonly student: FormBuilder) {
 }
+
 
   getErrorMessage() {
 
     //MENSAJE ERROR APELLIDOS
     if (this.lastNameStudent.hasError('required')) {
-      return 'No dejar campos vacios';
-    }
-    return this.lastNameStudent.hasError('lastNameStudent') ? 'Espacio Vacio' : '';
+      return  'No dejar campos vacios';
 
+      return this.lastNameStudent.hasError('lastNameStudent') ? 'Espacio Vacio' : '';
+    }
 
     //MENSAJE ERROR NOMRBES
     if (this.nameStudent.hasError('required')) {
-      return 'No dejar campos vacios';
+      return 'Nombre mal hecho';
     }
     return this.nameStudent.hasError('nameStudent') ? 'Espacio Vacio' : '';
 
   //MENSAJE ERROR FECHA
     if (this.dateStudent.hasError('required')) {
-      return 'No dejar campos vacios';
+      return 'Fecha Invalida';
     }
-    return this.dateStudent.hasError('dateStudent') ? 'Espacio Vacio' : '';
+    return this.dateStudent.hasError('dateStudent') ? 'Fecha Invalida' : '';
 
     //MENSAJE ERROR CON QUIEN VIVES
     if (this.homeStudent.hasError('required')) {
@@ -176,11 +180,11 @@ constructor( private readonly student: FormBuilder) {
     return this.student.group ({
 
 
-      lastNameStudent :['', [Validators.required]],
+      lastNameStudent :['', [Validators.required, Validators.minLength(50)]],
 
 
       //ERROR DE NOMBRE
-      nameStudent: ['', [Validators.required]],
+      nameStudent: ['', [Validators.required, Validators.minLength(50)]],
 
       /*ERROR DE EMAIL
       email = new FormControl('', [Validators.required, Validators.email]);*/

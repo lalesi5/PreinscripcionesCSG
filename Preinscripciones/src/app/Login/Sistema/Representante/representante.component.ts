@@ -55,13 +55,6 @@ export class RepresentanteComponent implements OnInit {
 
   getErrorMessage() {
 
-
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-
-
     //MENSAJE ERROR APELLIDOS
     if (this.lastNameParent.hasError('required')) {
       return 'No dejar campos vacios';
@@ -97,6 +90,12 @@ export class RepresentanteComponent implements OnInit {
       return 'No dejar campos vacios';
     }
     return this.addressParent.hasError('addressParent') ? 'Espacio Vacio' : '';
+
+
+    if (this.email.hasError('required')) {
+      return 'No dejar campos vacios';
+    }
+    return this.email.hasError('email') ? 'Not a valid email' : '';
 
 
     //MENSAJE ERROR CELULAR1

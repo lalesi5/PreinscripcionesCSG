@@ -21,24 +21,23 @@
 
   <h4> INFORMACION DEL ESTUDIANTE </h4>
 
-
+<!--*************************APELLIDOS*************************-->
     <td><mat-form-field class="studentName" appearance="fill">
       <mat-label>Apellido1 Apellido2</mat-label>
       <input matInput [formControl]="lastNameStudent" required>
-      <mat-error *ngIf="this.lastNameStudent">{{getErrorMessage()}}
-
+      <mat-error *ngIf="lastNameStudent.hasError('required') ">
+        Ingrese sus apellidos
       </mat-error>
-
-
     </mat-form-field></td>
 
 
+  <!--*************************NOMBRES*************************-->
 
     <td><mat-form-field class="studentLastName" appearance="fill">
       <mat-label>Nombre1 Nombre2</mat-label>
       <input matInput [formControl]="nameStudent" required>
-      <mat-error *ngIf="this.nameStudent">{{getErrorMessage()}}
-
+      <mat-error *ngIf="this.nameStudent.hasError('required') ">
+        Ingrese sus nombres
       </mat-error>
     </mat-form-field></td>
 
@@ -46,31 +45,41 @@
   <! ––«***********FECHA DE NACIMIENTO***************«––>
   <mat-form-field class="dateStudent"  appearance="fill">
     <mat-label>Fecha De Nacimiento</mat-label>
-    <!-- #docregion toggle -->
+
     <input matInput  [formControl]="dateStudent" required  [matDatepicker]="picker">
-    <mat-error *ngIf="this.dateStudent">{{getErrorMessage()}}
+    <mat-error *ngIf="dateStudent.hasError('required') ">
+      Ingrese una fecha <strong>valida</strong>
 
     </mat-error>
     <mat-hint>MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
+    <mat-datepicker #picker>
+    </mat-datepicker>
     <!-- #enddocregion toggle -->
   </mat-form-field>
 
 
 
   <! ––«***********CON QUIENES VIVE***************«––>
-  <p>
-    <mat-form-field class="homeStudent" appearance="fill">
-      <mat-label>¿Con Quién Vive?</mat-label>
-      <textarea matInput  [formControl]="homeStudent" required    placeholder="Padre/Madre/Hermanos/Abuelos"></textarea>
-      <mat-error *ngIf="this.dateStudent">{{getErrorMessage()}}
 
-      </mat-error>
-    </mat-form-field>
-  </p>
+<form>
+  <section class="example-section" [formGroup]="toppings">
+    <h4>CON QUIEN VIVE EL ESTUDIANTE:</h4>
+    <h4><strong> Seleccione al menos una opcion </strong> </h4>
 
 
+
+    <p><mat-checkbox formControlName="padre">Padre</mat-checkbox></p>
+    <p><mat-checkbox formControlName="madre">Madre</mat-checkbox></p>
+    <p><mat-checkbox formControlName="herman@s">Hermano/a</mat-checkbox></p>
+  <p><mat-checkbox formControlName="abuel@s">Abuelo/a</mat-checkbox></p>
+  <p><mat-checkbox formControlName="ti@s">Tio/a</mat-checkbox></p>
+
+  <mat-error *ngIf="homeStudent.hasError('required') ">
+  </mat-error>
+
+</section>
+</form>
 
   <! ––«***********TIPO DE IDENTIFICACIÓN***************«––>
 
