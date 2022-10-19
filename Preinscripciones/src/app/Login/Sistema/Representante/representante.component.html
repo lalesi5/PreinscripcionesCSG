@@ -1,18 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+
+<body>
+
+<form class="Representante">
+  <mat-form-field class="informationRepresentante" appearance="fill">
+    <mat-label></mat-label>
+    <input matInput disabled value="">
+  </mat-form-field>
 
 <h4> INFORMACION DEL REPRESENTANTE </h4>
 
 <table class="informationParents" cellspacing="0"><tr>
   <td><mat-form-field class="informationParents" appearance="fill">
     <mat-label>Apellido1 Apellido2</mat-label>
-    <input matInput>
+    <input matInput [formControl]="lastNameParent" required>
+
+    <mat-error *ngIf="this.lastNameParent">{{getErrorMessage()}}
+
+    </mat-error>
+
   </mat-form-field></td>
   <td><mat-form-field class="informationParents" appearance="fill">
     <mat-label>Nombre1 Nombre2</mat-label>
-    <input matInput>
+    <input matInput [formControl]="nameParent" required>
+
+    <mat-error *ngIf="this.nameParent">{{getErrorMessage()}}
+
+    </mat-error>
+
   </mat-form-field></td>
 </tr></table>
-
-
 
 
 <! ––«***********TIPO DE IDENTIFICACIÓN***************«––>
@@ -27,14 +55,19 @@
 <form class="inputCIParents">
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Numero de Identificación</mat-label>
-    <input matInput placeholder="Ex. 1723885826" value="">
+    <input matInput  [formControl]="parentCI" required placeholder="Ex. 1723885826" value="">
+
+    <mat-error *ngIf="this.parentCI">{{getErrorMessage()}}
+
+    </mat-error>
+
   </mat-form-field>
 </form>
 
 
 
-<! ––«***********PARENTEZCO***************«––>
 
+<! ––«***********PARENTEZCO***************«––>
 
 <h4> PARENTEZCO CON EL ESTUDIANTE </h4>
 
@@ -42,7 +75,7 @@
   <h4>Seleccione una opcion</h4>
   <mat-form-field appearance="fill">
     <mat-label>Parentezco</mat-label>
-    <select matNativeControl required>
+    <select [formControl]="familiar" required matNativeControl required>
       <option value=""> </option>
       <option value="PADRE">PADRE</option>
       <option value="MADRE">MADRE</option>
@@ -50,6 +83,10 @@
       <option value="TI@">TIO/A</option>
       <option value="otro">Otro..</option>
     </select>
+
+    <mat-error *ngIf="this.familiar">{{getErrorMessage()}}
+
+    </mat-error>
   </mat-form-field>
 </div>
 
@@ -77,7 +114,12 @@
 <p>
   <mat-form-field class="addressParent" appearance="fill">
     <mat-label>Direccion Exacta</mat-label>
-    <textarea matInput placeholder=" "></textarea>
+    <textarea matInput [formControl]="addressParent" required placeholder=" "></textarea>
+
+    <mat-error *ngIf="this.addressParent">{{getErrorMessage()}}
+
+    </mat-error>
+
   </mat-form-field>
 </p>
 
@@ -106,8 +148,13 @@
   <mat-form-field class="Numero de Contacto de Representante1" appearance="fill">
     <mat-label>Telefono Convencional</mat-label>
     <span matPrefix>"593"  &nbsp;</span>
-    <input type="tel" matInput placeholder="02-2828441">
+    <input [formControl]="parentsPhone1" required  type="tel" matInput placeholder="02-2828441">
     <mat-icon matSuffix>mode_edit</mat-icon>
+
+    <mat-error *ngIf="this.parentsPhone1">{{getErrorMessage()}}
+
+    </mat-error>
+
   </mat-form-field>
 </form>
 
@@ -116,7 +163,20 @@
   <mat-form-field class="Numero de Contacto de Representante1" appearance="fill">
     <mat-label>Celular </mat-label>
     <span matPrefix>+593 &nbsp;</span>
-    <input type="tel" matInput placeholder="098-027-5610">
+    <input [formControl]="parentsPhone2" required  type="tel" matInput placeholder="098-027-5610">
     <mat-icon matSuffix>mode_edit</mat-icon>
+
+    <mat-error *ngIf="this.parentsPhone2">{{getErrorMessage()}}
+
+    </mat-error>
+
   </mat-form-field>
 </form>
+
+
+
+</form>
+</body>
+</html>
+
+
