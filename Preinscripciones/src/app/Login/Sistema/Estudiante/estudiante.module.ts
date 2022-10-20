@@ -6,7 +6,7 @@ import { EstudianteRoutingModule } from "./estudiante-routing.module";
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatNativeDateModule} from '@angular/material/core';
+import {MatCommonModule, MatNativeDateModule} from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
 
 
@@ -17,6 +17,14 @@ import {SistemaModule} from "../sistema.module";
 import {MatTabsModule} from "@angular/material/tabs";
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {MatRadioModule} from "@angular/material/radio";
+import {MatCardModule} from "@angular/material/card";
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+
+
 
 @NgModule({
     declarations: [
@@ -34,7 +42,17 @@ import {MatRadioModule} from "@angular/material/radio";
         ReactiveFormsModule, MatTabsModule,
       RouterLinkActive,
       RouterLink,
-      MatRadioModule
+      MatRadioModule,
+
+      MatCardModule,
+      MatDialogModule,
+      MatIconModule,
+      MatCommonModule,
+      MatButtonModule,
+      ReactiveFormsModule,
+      MatFormFieldModule,
+      MatInputModule,
+      FormsModule
     ],
   providers: [],
   bootstrap: [SistemaComponent]
