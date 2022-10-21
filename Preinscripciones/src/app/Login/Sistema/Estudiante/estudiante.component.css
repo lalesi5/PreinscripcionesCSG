@@ -1,15 +1,51 @@
 /* NOMBRES Y APELLIDOS*/
-.Student {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+.studentPrincipal {
+  background-color: #D4E6F1;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: auto !important;
 }
 
+
+.student_info {
+  padding: 60px 0;
+
+  width: 80%;
+  margin: 0 auto;
+  background-color: #EAFAF1 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5em;
+}
+
+form{
+  background: #F5B7B1;
+  width: 80%;
+
+}
+
+.class1{
+
+  background-color: #45B39D ;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2.5em;
+  flex-wrap: wrap;
+
+}
+
+  .class1 .studentInput {
+  background: blueviolet;
+
+}
 
 
 .example-section {
   margin: 12px 0;
 }
+
 /* CON QUIENES VIVE
 .homeStudent {
   min-width: 150px;
@@ -33,8 +69,8 @@
 
 
 /* NIVEL AL QUE APLICA*/
-.levelAplication{
-width: 100%;
+.levelAplication {
+  width: 100%;
 }
 
 
@@ -46,13 +82,12 @@ width: 100%;
 }
 
 
-
 /* HIJO DE EX ALUMNO*/
-.ex-alumnoChild{
+.ex-alumnoChild {
   width: 100%;
 }
 
-.ex-alumnoChild2{
+.ex-alumnoChild2 {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
@@ -60,14 +95,14 @@ width: 100%;
 
 
 /* DIRECCION*/
-.studentAddress{
+.studentAddress {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
 }
 
 /*CIUDAD*/
-.city{
+.city {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
@@ -76,7 +111,7 @@ width: 100%;
 /*  SUBIR IMAGEN  */
 
 
-.wrapper-button{
+.wrapper-button {
   padding-top: 1rem;
   width: 100%;
 }
@@ -93,7 +128,7 @@ width: 100%;
   margin: 5px;
 }
 
-.w-100{
+.w-100 {
   width: 100%;
 }
 

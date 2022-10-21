@@ -7,112 +7,74 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>estudiante</title>
 </head>
-
-
 <body>
-
+<div class="studentPrincipal">
+<div class="student_info">
 <form [formGroup]="studentForm" class="informationStudent">
-  <mat-form-field class="informationStudent" appearance="fill">
-    <mat-label></mat-label>
-    <input matInput disabled value="">
-  </mat-form-field>
-
-
-  <! ––«***********NOMBRES Y APELLIDOS***************«––>
-
+  <!––***********NOMBRES Y APELLIDOS***************––>
   <h4> INFORMACION DEL ESTUDIANTE </h4>
 
 <!--*************************APELLIDOS*************************-->
-    <td><mat-form-field class="studentLastName" appearance="fill">
+  <div class="class1">
+    <mat-form-field class="studentInput" appearance="fill">
       <mat-label>Apellido1 Apellido2</mat-label>
       <input matInput [formControl]="lastNameStudent" required>
       <mat-icon matPrefix> contacts</mat-icon>
       <mat-error *ngIf="lastNameStudent.hasError('required') ">
         Ingrese sus apellidos
       </mat-error>
-    </mat-form-field></td>
+    </mat-form-field>
 
 
   <!--*************************NOMBRES*************************-->
-
-    <td><mat-form-field class="studentName" appearance="fill">
+ <mat-form-field class="studentInput" appearance="fill">
       <mat-label>Nombre1 Nombre2</mat-label>
       <input matInput formControlName="nameStudent" required>
       <mat-icon matPrefix> contacts</mat-icon>
       <mat-error *ngIf="this.nameStudent.hasError('required') ">
         Ingrese sus nombres
       </mat-error>
-    </mat-form-field></td>
-
+    </mat-form-field>
 
   <! ––«***********FECHA DE NACIMIENTO***************«––>
-  <mat-form-field class="dateStudent"  appearance="fill">
+ <mat-form-field class="studentInput"  appearance="fill">
     <mat-label>Fecha De Nacimiento</mat-label>
-
     <input matInput  formControlName="dateStudent" required  [matDatepicker]="picker">
     <mat-error *ngIf="dateStudent.hasError('required') ">
       Ingrese una fecha <strong>valida</strong>
-
     </mat-error>
     <mat-hint>MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker>
     </mat-datepicker>
-    <!-- #enddocregion toggle -->
   </mat-form-field>
-
-
-
+  </div>
   <! ––«***********CON QUIENES VIVE***************«––>
-
-     <h4>CON QUIEN VIVE EL ESTUDIANTE: </h4>
-
-
+  <h4>CON QUIEN VIVE EL ESTUDIANTE: </h4>
   <section class="homeStudent" [formGroup]="toppings">
     <h4><strong> Seleccione al menos una opcion </strong> </h4>
     <mat-icon>group</mat-icon>
-
     <p><mat-checkbox formControlName="padre">Padre</mat-checkbox></p>
     <p><mat-checkbox formControlName="madre">Madre</mat-checkbox></p>
     <p><mat-checkbox formControlName="hermanos">Hermano/a</mat-checkbox></p>
   <p><mat-checkbox formControlName="abuelos">Abuelo/a</mat-checkbox></p>
   <p><mat-checkbox formControlName="tios">Tio/a</mat-checkbox></p>
-
-    <mat-error *ngIf="toppings.hasError('required') ">
-
-    </mat-error>
-
   </section>
-
-
   <! ––«***********TIPO DE IDENTIFICACIÓN***************«––>
-<p></p>
   <h4> TIPO DE IDENTIFICACION </h4>
   <mat-radio-group  class="buttonStudentCI" labelPosition="before" formControlName="studentCI2" required  aria-label="Seleccione el tipo de Identificación" >
-
     <mat-radio-button value="1">Cedula </mat-radio-button>
     <mat-radio-button value="2">Pasaporte </mat-radio-button>
-    <mat-error *ngIf="studentCI.hasError('required') ">
-      Elija una opcion
-    </mat-error>
+    <mat-error *ngIf="studentCI.hasError('required') ">Elija una opcion</mat-error>
   </mat-radio-group>
-
-
-    <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill">
     <mat-label>Numero de Identificación</mat-label>
       <input matInput id="studentCI2" (keydown)="check($event)" name="studentCI" formControlName="studentCI2" minlength="10" maxlength="15">
       <mat-icon matPrefix>perm_identity</mat-icon>
-      <mat-error *ngIf="studentCI2.invalid">{{msgValidateCedula()}}
-
-      </mat-error>
-
+      <mat-error *ngIf="studentCI2.invalid">{{msgValidateCedula()}}</mat-error>
   </mat-form-field>
-
-
   <! ––«***********NIVEL AL QUE APLICA***************«––>
   <h4> NIVEL DEL ESTUDIANTE </h4>
-
-
     <h4>Nivel Al Que Aplica</h4>
     <mat-form-field appearance="fill">
       <mat-label>Niveles</mat-label>
@@ -135,37 +97,20 @@
         <option value="SEGUNDO CURSO DE BACHILLERATO EN CIENCIAS">SEGUNDO CURSO DE BACHILLERATO EN CIENCIAS</option>
         <option value="TERCER CURSO DE BACHILLERATO EN CIENCIAS">TERCER CURSO DE BACHILLERATO EN CIENCIAS</option>
       </select>
-
-      <mat-error *ngIf="studentLevel.hasError('required')">
-      Campo requerido
-      </mat-error>
-
+      <mat-error *ngIf="studentLevel.hasError('required')">Campo requerido</mat-error>
     </mat-form-field>
-
-
-
-
   <! ––«***********INSTITUCIÓN DE PROCEDENCIA***************«––>
   <h4> FORMACION DEL ESTUDIANTE </h4>
-
-  <p>
     <mat-form-field class="informationInstitution" appearance="fill">
       <mat-label>INSTITUCIÓN DE PROCEDENCIA</mat-label>
       <textarea matInput formControlName="studentInstitution" required  placeholder=" "></textarea>
       <mat-icon matPrefix>school</mat-icon>
       <mat-error *ngIf="this.studentInstitution">{{getErrorMessage()}}
-
       </mat-error>
-
     </mat-form-field>
-  </p>
-
   <! ––«***********HIJO DE EX-ALUMNO***************«––>
-
   <h4> INFORMACION PARENTAL </h4>
-
-  <div class="ex-alumnoChild">
-    <h4>El estudiante es hijo de un Ex-Alumno?</h4>
+      <h4>El estudiante es hijo de un Ex-Alumno?</h4>
     <mat-form-field appearance="fill">
       <mat-label>Escoja su respuesta</mat-label>
       <select matNativeControl required>
@@ -173,26 +118,18 @@
         <option value="SI">SI</option>
       </select>
     </mat-form-field>
-  </div>
   <! ––«***********HIJO DE EX-ALUMNO2***************«––>
-  <p>
   <h4>Si la respuesta fue "SI" llene la siguiente información</h4>
-
   <mat-form-field class="ex-alumnoChild2" appearance="fill">
     <mat-label>Datos del Ex-Alumno</mat-label>
     <textarea matInput placeholder=" "></textarea>
   </mat-form-field>
-
   <! ––«***********FAMILIARES EN LA INSTITUCION***************«––>
-
-
-
   <! ––«***********HERMANOS EN LA INSTITUCION***************«––>
-  <div class="bro/sis">
     <h4>Cuantos hermanos tiene el estudiante en la institucion?</h4>
-    <mat-form-field appearance="fill">
-      <mat-label>Escoja su respuesta</mat-label>
-      <mat-icon matPrefix>people</mat-icon>
+  <mat-form-field appearance="fill">
+    <mat-label>Escoja su respuesta</mat-label>
+    <mat-icon matPrefix>people</mat-icon>
       <select matNativeControl required>
         <option value="0">Ninguno</option>
         <option value="1">Un Hermano</option>
@@ -200,14 +137,9 @@
         <option value="3">Tres Hermanos</option>
         <option value="4">Cuatro Hermanos</option>
         <option value="5">Cinco Hermanos</option>
-
-
       </select>
-    </mat-form-field>
-  </div>
-
+  </mat-form-field>
   <! ––«***********PADRE/MADRE EN LA INSTITUCION***************«––>
-  <div class="dad/mom">
     <h4>Su Padre/Madre trabaja actualmente en la institucion?</h4>
     <mat-form-field appearance="fill">
       <mat-label>Escoja su respuesta</mat-label>
@@ -217,97 +149,61 @@
         <option value="PADRE">PADRE</option>
         <option value="MADRE">MADRE</option>
         <option value="padre y madre">PADRE Y MADRE</option>
-
-
       </select>
     </mat-form-field>
-
-  </div>
-
   <! ––«***********DIRECCION***************«––>
   <h4> DOMICILIO DEL ESTUDIANTE </h4>
   <! ––«***********CIUDAD***************«––>
-
-  <td><mat-form-field class= "studentCity" appearance="fill">
-      <mat-label>CANTON</mat-label>
-      <input matInput id="studentCity" name="studentCity"  formControlName="studentCity"  minlength="10" maxlength="150">
+  <mat-form-field class= "studentCity" appearance="fill">
+    <mat-label>CANTON</mat-label>
+    <input matInput id="studentCity" name="studentCity"  formControlName="studentCity"  minlength="10" maxlength="150">
     <mat-icon matPrefix>location_city</mat-icon>
-      <mat-error *ngIf="studentForm.invalid">{{msgValidateTexto()}}</mat-error>
-    </mat-form-field></td>
-
-
-
-
-  <td><mat-form-field class="studentAddress" appearance="fill">
+    <mat-error *ngIf="studentForm.invalid">{{msgValidateTexto()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field class="studentAddress" appearance="fill">
     <mat-label>DIRECCION EXACTA</mat-label>
     <input matInput id="studentAddress" name="studentAddress"  formControlName="studentAddress"  minlength="10" maxlength="150">
     <mat-icon matPrefix>home</mat-icon>
     <mat-error *ngIf="studentForm.invalid">{{msgValidateTexto()}}</mat-error>
-  </mat-form-field></td>
-
-
+  </mat-form-field>
   <! ––«****************CONTACTOS*******************«––>
   <h4> NUMEROS DE CONTACTO </h4>
-
   <! ––«***********Telefono1***************«––>
-
-  <td><mat-form-field appearance="fill">
-      <mat-label>Celular 1</mat-label>
-     <!-- <span matPrefix>Tel:&nbsp;</span> -->
-      <input (keydown)="check($event)" type="tel" matInput id="studentPhone1" formControlName="studentPhone1" required  minlength="10" maxlength="10" placeholder="098-027-5610">
-      <mat-icon matSuffix>phone</mat-icon>
-
-      <mat-error *ngIf="studentForm.invalid">{{msgValidateCelular()}}
-
-      </mat-error>
-
-    </mat-form-field></td>
-
+  <mat-form-field appearance="fill">
+    <mat-label>Celular 1</mat-label>
+    <input (keydown)="check($event)" type="tel" matInput id="studentPhone1" formControlName="studentPhone1" required  minlength="10" maxlength="10" placeholder="098-027-5610">
+    <mat-icon matSuffix>phone</mat-icon>
+    <mat-error *ngIf="studentForm.invalid">{{msgValidateCelular()}}</mat-error>
+    </mat-form-field>
   <! ––«***********Telefono2***************«––>
-
-  <td><mat-form-field class="Numero de Contacto2" appearance="fill">
-      <mat-label>Celular 2</mat-label>
-     <!-- <span matPrefix>cel:</span>  -->
-      <input (keydown)="check($event)" type="tel" matInput id="studentPhone2" formControlName="studentPhone2" requered minlength="10" maxlength="10"  placeholder="098-027-5610">
-      <mat-icon matSuffix>phone_android</mat-icon>
-
-      <mat-error *ngIf="studentForm.invalid">{{msgValidateCelular()}}
-      </mat-error>
-    </mat-form-field></td>
-
-  <! ––«***********IMAGEN CEDULA***************«––>
-
-  <h4> Cargar imagen o PDF de cédula del aspirante </h4>
-
-    <input type="file"  formControlName="studentCI" required >
-  <mat-icon matPrefix>backup</mat-icon>
-      <mat-error *ngIf="studentCI.hasError ('required')">
-        <mat-label><strong>   .pdf   </strong></mat-label>
-        <mat-label><strong>   o   </strong></mat-label>
-        <mat-label><strong>   .jpg   </strong></mat-label>
-      </mat-error>
-
-  <h4> </h4>
-  <! ––«***********IMAGEN LIBRETA***************«––>
-  <h4>Cargar imagen libreta (aplica 1ro de básica en adelante)</h4>
-
-    <input  formControlName="studentPDF" required type="file" >
-  <mat-icon matPrefix>backup</mat-icon>
-    <mat-error *ngIf="studentPDF.hasError ('required')">
-      <mat-label><strong>   .pdf   </strong></mat-label>
-      <mat-label><strong>   o   </strong></mat-label>
-      <mat-label><strong>   .jpg   </strong></mat-label>
+  <mat-form-field class="Numero de Contacto2" appearance="fill">
+    <mat-label>Celular 2</mat-label>
+    <input (keydown)="check($event)" type="tel" matInput id="studentPhone2" formControlName="studentPhone2" requered minlength="10" maxlength="10"  placeholder="098-027-5610">
+    <mat-icon matSuffix>phone_android</mat-icon>
+    <mat-error *ngIf="studentForm.invalid">{{msgValidateCelular()}}
     </mat-error>
-
-  <p><button id="button1" type="submit" mat-raised-button>Guardar
-    <mat-icon matPrefix>save</mat-icon>
-  </button></p>
-
+  </mat-form-field>
+  <! ––«***********IMAGEN CEDULA***************«––>
+  <h4> Cargar imagen o PDF de cédula del aspirante </h4>
+  <input type="file"  formControlName="studentCI" required >
+  <mat-icon matPrefix>backup</mat-icon>
+  <mat-error *ngIf="studentCI.hasError ('required')">
+    <mat-label><strong>   .pdf   </strong></mat-label>
+    <mat-label><strong>   o   </strong></mat-label>
+    <mat-label><strong>   .jpg   </strong></mat-label>
+  </mat-error>
+    <! ––«***********IMAGEN LIBRETA***************«––>
+  <h4>Cargar imagen libreta (aplica 1ro de básica en adelante)</h4>
+  <input  formControlName="studentPDF" required type="file" >
+  <mat-icon matPrefix>backup</mat-icon>
+  <mat-error *ngIf="studentPDF.hasError ('required')">
+    <mat-label><strong>   .pdf   </strong></mat-label>
+    <mat-label><strong>   o   </strong></mat-label>
+    <mat-label><strong>   .jpg   </strong></mat-label>
+  </mat-error>
+  <button id="button1" type="submit" mat-raised-button>Guardar<mat-icon matPrefix>save</mat-icon></button>
 </form>
-
+</div>
+</div>
 </body>
 </html>
-
-
-
-
