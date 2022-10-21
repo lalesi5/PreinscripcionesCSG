@@ -12,44 +12,36 @@ interface Food {
   styleUrls: ['./representante.component.css']
 })
 export class RepresentanteComponent implements OnInit {
+  emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,4}))$/;
+
+  allowedChars = new Set('0123456789'.split('').map(c => c.charCodeAt(0)));
 
   representanteForm!: FormGroup;
 
 
   //ERROR DE APELLIDOS
   lastNameParent = new FormControl('', [Validators.required]);
-
-
   //ERROR DE NOMBRES
   //name = new FormControl({
   nameParent = new FormControl('', Validators.required)
-
-
   //ERROR DE EMAIL
-  email = new FormControl('', [Validators.required]);
-
-//ERROR CEDULA
-
+  email = new FormControl('', [Validators.required, Validators.email]);
+  //ERROR CEDULA
   parentCI = new FormControl('', [Validators.required]);
+  parentCI2 = new FormControl('', [Validators.required]);
 
+  //ERROR PARENTEZCO
+  parentezco = new FormControl('', [Validators.required]);
+  //ERROR DIRECCION REPRESENTANTE
+  parentAddress = new FormControl('', [Validators.required]);
+  parentCity = new FormControl('', [Validators.required]);
 
-//ERROR PARENTEZCO
-  familiar = new FormControl('', [Validators.required]);
-
-
-
-//ERROR DIRECCION REPRESENTANTE
-
-  addressParent = new FormControl('', [Validators.required]);
-
-
-//ERROR TELEFONOS DE CONTACTO
+  //ERROR TELEFONOS DE CONTACTO
   parentsPhone1 = new FormControl('', [Validators.required]);
   parentsPhone2 = new FormControl('', [Validators.required]);
 
 
-
-  constructor( private readonly representante: FormBuilder) {
+  constructor(private readonly representante: FormBuilder) {
   }
 
 
@@ -57,7 +49,7 @@ export class RepresentanteComponent implements OnInit {
 
     //MENSAJE ERROR APELLIDOS
     if (this.lastNameParent.hasError('required')) {
-      return 'No dejar campos vacios';
+      return 'Campo requerido';
     }
     return this.lastNameParent.hasError('lastNameParent') ? 'Espacio Vacio' : '';
 
@@ -76,20 +68,18 @@ export class RepresentanteComponent implements OnInit {
     return this.parentCI.hasError('parentCI') ? 'Espacio Vacio' : '';
 
 
-
 //MENSAJE ERROR PARENTEZCO
-    if (this.familiar.hasError('required')) {
+    if (this.parentezco.hasError('required')) {
       return 'No dejar campos vacios';
     }
-    return this.familiar.hasError('familiar') ? 'Espacio Vacio' : '';
-
+    return this.parentezco.hasError('familiar') ? 'Espacio Vacio' : '';
 
 
 //MENSAJE ERROR DIRECCION REPRESENTANTE
-    if (this.addressParent.hasError('required')) {
+    if (this.parentAddress.hasError('required')) {
       return 'No dejar campos vacios';
     }
-    return this.addressParent.hasError('addressParent') ? 'Espacio Vacio' : '';
+    return this.parentAddress.hasError('addressParent') ? 'Espacio Vacio' : '';
 
 
     if (this.email.hasError('required')) {
@@ -114,47 +104,97 @@ export class RepresentanteComponent implements OnInit {
   }
 
 
-
   ngOnInit(): void {
+    this.representanteForm = this.initForm();
   }
+
+  onSubmit (): void{
+    console.log('Hola');
+  }
+
 
   initForm(): FormGroup {
     return this.representante.group({
 
-
-
-
       //ERROR DE APELLIDOS
-      lastNameParent :['', [Validators.required]],
+      lastNameParent: ['', [Validators.required, Validators.minLength(50)]],
 
 
       //ERROR DE NOMBRES
       //name = new FormControl({
-      nameParent :['', [Validators.required]],
+      nameParent: ['', [Validators.required, Validators.minLength(50)]],
 
 
       //ERROR DE EMAIL
-      email :['', [Validators.required]],
+      email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
 
 //ERROR CEDULA
 
-      parentCI :['', [Validators.required]],
+      parentCI: ['', [Validators.required]],
+      parentCI2: ['', [Validators.required]],
+
 
 
 //ERROR PARENTEZCO
-      familiar :['', [Validators.required]],
-
+      parentezco: ['', [Validators.required]],
 
 
 //ERROR DIRECCION REPRESENTANTE
 
-      addressParent :['', [Validators.required]],
+      parentAddress: ['', [Validators.required]],
+      parentCity: ['', [Validators.required]],
+
 
 
 //ERROR TELEFONOS DE CONTACTO
-      parentsPhone1 :['', [Validators.required]],
-      parentsPhone2 :['', [Validators.required]]
+      parentPhone1: ['', [Validators.required]],
+      parentPhone2: ['', [Validators.required]]
 
     })
+  }
+
+
+  msgValidateCedula() {
+    return this.representanteForm.get('parentCI2')?.hasError('required') ? 'Campo requerido' :
+      this.representanteForm.get('parentCI2')?.hasError('minlength') ? 'La identificación debe tener como minimo 10 digitos' :
+        this.representanteForm.get('parentCI2')?.hasError('repeatOdonto') ? 'La cédula ya se encuentra registrada' :
+          '';
+  }
+
+
+  msgValidateTexto() {
+    return this.representanteForm.get('parentCity')?.hasError('required') ? 'Campo requerido' :
+      this.representanteForm.get('parentCity')?.hasError('minlength') ? 'No exceder los 150 caracteres' :
+
+        this.representanteForm.get('parentAddress')?.hasError('required') ? 'Campo requerido' :
+          this.representanteForm.get('parentAddress')?.hasError('minlength') ? 'No exceder los 150 caracteres' :
+            '';
+  }
+
+  msgValidateEmail() {
+    return this.representanteForm.get('email')?.hasError('pattern') ? 'Correo electrónico invalido' :
+      this.representanteForm.get('email')?.hasError('required') ? 'Campo Requerido' : '';
+  }
+
+  msgValidateCelular() {
+    return this.representanteForm.get('parentPhone1')?.hasError('required') ? 'Campo requerido' :
+      this.representanteForm.get('parentPhone1')?.hasError('minlength') ? 'El numero debe tener como minimo 10 digitos' :
+
+        this.representanteForm.get('parentPhone2')?.hasError('required') ? 'Campo requerido' :
+          this.representanteForm.get('parentPhone2')?.hasError('minlength') ? 'El numero debe tener como minimo 10 digitos' :
+
+            '';
+  }
+
+
+
+
+  check(event: KeyboardEvent) {
+    var preg = /^([0-9]+\.?[0-9]{0,2})$/;
+    if ((preg.test(event.key) !== true) && event.keyCode > 31 && !this.allowedChars.has(event.keyCode)) {
+      event.preventDefault();
+    }
+
+
   }
 }

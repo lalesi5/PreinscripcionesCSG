@@ -23,6 +23,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {MatStepperModule} from "@angular/material/stepper";
 
 
 
@@ -30,30 +31,30 @@ import {MatInputModule} from "@angular/material/input";
     declarations: [
         SistemaComponent
     ],
-    imports: [CommonModule,
-        EstudianteRoutingModule,
-        SistemaModule,
-        BrowserAnimationsModule,
-        NoopAnimationsModule,
-        BrowserModule,
-        FormsModule,
-        HttpClientModule,
-        MatNativeDateModule,
-        ReactiveFormsModule, MatTabsModule,
-      RouterLinkActive,
-      RouterLink,
-      MatRadioModule,
+  imports: [CommonModule,
+    EstudianteRoutingModule,
+    SistemaModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule, MatTabsModule,
+    RouterLinkActive,
+    RouterLink,
+    MatRadioModule,
 
-      MatCardModule,
-      MatDialogModule,
-      MatIconModule,
-      MatCommonModule,
-      MatButtonModule,
-      ReactiveFormsModule,
-      MatFormFieldModule,
-      MatInputModule,
-      FormsModule
-    ],
+    MatCardModule,
+    MatDialogModule,
+    MatIconModule,
+    MatCommonModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule, MatStepperModule
+  ],
   providers: [],
   bootstrap: [SistemaComponent]
 

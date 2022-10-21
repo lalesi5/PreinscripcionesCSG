@@ -9,22 +9,23 @@
 </head>
 
 
-
 <body>
 <form>
   <!PRIMERA PÁGINA>
 
   <mat-stepper #stepper>
     <mat-step>
-      <form [formGroup]="firstFormGroup">
+
         <ng-template matStepLabel>INFORMACIÓN</ng-template>
 
         <div>
           <p></p>
-          <button mat-button matStepperNext >Siguiente</button>
+          <button mat-button matStepperNext >Siguiente
+           <mat-icon matPrefix>skip_next</mat-icon>
+          </button>
         </div>
 
-      </form>
+
     </mat-step>
 
 
@@ -33,36 +34,47 @@
     <!SEGUNDA PÁGINA>
 
     <mat-step [stepControl]="secondFormGroup" errorMessage="Llenar todos los campos.">
-      <form  [formGroup]="secondFormGroup">
+
         <ng-template  matStepLabel>ESTUDIANTE</ng-template>
 
-        <div>
+
 
           <!COMPONENTE ESTUDIANTE>
+          <div>
           <app-estudiante></app-estudiante>
-          <button  mat-button matStepperPrevious>Atrás</button>
-          <button mat-button matStepperNext>Siguiente</button>
+          <div></div>
+          <button  mat-button matStepperPrevious>Atrás
+            <mat-icon >skip_previous</mat-icon>
+          </button>
+
+          <button mat-button matStepperNext>Siguiente
+            <mat-icon matPrefix>skip_next</mat-icon>
+         </button>
         </div>
-      </form>
+
     </mat-step>
 
 
 
-      <!TERCERA PÁGINA>
+      <!COMPONENTE REPRESENTANTE>
 
 
       <mat-step [stepControl]="thirdFormGroup" errorMessage="Llenar todos los campos.">
-        <form  [formGroup]="thirdFormGroup">
+
           <ng-template matStepLabel>REPRESENTANTE</ng-template>
 
       <!COMPONENTE REPRESENTANTE>
-          <div>
+          
       <app-representante></app-representante>
             <div></div>
-        <button mat-button matStepperPrevious>Atrás</button>
-        <button mat-button matStepperNext>Siguiente</button>
-      </div>
-        </form>
+        <button mat-button matStepperPrevious>Atrás
+          <mat-icon matPrefix>skip_previous</mat-icon>
+        </button>
+        <button mat-button matStepperNext>Siguiente
+          <mat-icon matPrefix>skip_next</mat-icon>
+        </button>
+
+
     </mat-step>
 
     <mat-step>
@@ -71,8 +83,12 @@
 
       <div></div>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Inscribir Nuevo Estudiante</button>
+        <button mat-button matStepperPrevious>Back
+          <mat-icon matPrefix>skip_previous</mat-icon>
+        </button>
+        <button mat-button (click)="stepper.reset()">Inscribir Nuevo Estudiante
+          <mat-icon matSuffix>person_add</mat-icon>
+        </button>
       </div>
     </mat-step>
 
