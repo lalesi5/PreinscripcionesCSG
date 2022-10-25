@@ -9,32 +9,26 @@
 </head>
 <body>
 <div class="studentPrincipal">
-<div class="student_info">
-<form [formGroup]="studentForm" class="informationStudent">
-  <!––***********NOMBRES Y APELLIDOS***************––>
-  <h4> INFORMACION DEL ESTUDIANTE </h4>
+  <div class="student_info">
+    <form [formGroup]="studentForm" class="informationStudent">
+      <!––***********NOMBRES Y APELLIDOS***************––>
+      <h4> INFORMACION DEL ESTUDIANTE </h4>
 
-<!--*************************APELLIDOS*************************-->
-  <div class="class1">
-    <mat-form-field class="studentInput" appearance="fill">
-      <mat-label>Apellido1 Apellido2</mat-label>
-      <input matInput [formControl]="lastNameStudent" required>
-      <mat-icon matPrefix> contacts</mat-icon>
-      <mat-error *ngIf="lastNameStudent.hasError('required') ">
-        Ingrese sus apellidos
-      </mat-error>
-    </mat-form-field>
-
-
+      <!--*************************APELLIDOS*************************-->
+        <div class="class1">
+          <mat-form-field class="studentInput" appearance="fill">
+            <mat-label>Apellido1 Apellido2</mat-label>
+            <input matInput formControlName="lastNameStudent" required>
+            <mat-icon matPrefix> contacts</mat-icon>
+            <mat-error *ngIf="lastNameStudent.hasError('required') ">Ingrese sus apellidos</mat-error>
+          </mat-form-field>
   <!--*************************NOMBRES*************************-->
- <mat-form-field class="studentInput" appearance="fill">
-      <mat-label>Nombre1 Nombre2</mat-label>
-      <input matInput formControlName="nameStudent" required>
-      <mat-icon matPrefix> contacts</mat-icon>
-      <mat-error *ngIf="this.nameStudent.hasError('required') ">
-        Ingrese sus nombres
-      </mat-error>
-    </mat-form-field>
+          <mat-form-field class="studentInput" appearance="fill">
+            <mat-label>Nombre1 Nombre2</mat-label>
+            <input matInput formControlName="nameStudent" required>
+            <mat-icon matPrefix> contacts</mat-icon>
+            <mat-error *ngIf="nameStudent.hasError('required') ">Ingrese sus nombres</mat-error>
+          </mat-form-field>
 
   <! ––«***********FECHA DE NACIMIENTO***************«––>
  <mat-form-field class="studentInput"  appearance="fill">
@@ -217,8 +211,6 @@
         </mat-form-field>
       </div>
     </div>
-
-
   <! ––«****************CONTACTOS*******************«––>
     <div class="columna11">
       <h4> NUMEROS DE CONTACTO </h4>
