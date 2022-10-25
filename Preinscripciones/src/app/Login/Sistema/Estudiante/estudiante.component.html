@@ -152,9 +152,11 @@
     <div class="columna6">
     <h4>Si la respuesta fue "SI" llene la siguiente información</h4>
       <div class="cont_6">
-  <mat-form-field class="ex-alumnoChild2" appearance="fill">
-    <mat-label>Nombre Completo y Promocion del Ex-Alumno</mat-label>
-    <textarea matInput placeholder=" "></textarea>
+        <h4>Nombre Completo y Promocion del Ex-Alumno</h4>
+        <mat-form-field class="ex-alumnoChild2" appearance="fill">
+    <mat-label>NombreCompleto - Promocion: X</mat-label>
+          <mat-icon matPrefix>face</mat-icon>
+          <input matInput placeholder=" ">
   </mat-form-field>
       </div>
     </div>
@@ -222,14 +224,14 @@
       <h4> NUMEROS DE CONTACTO </h4>
       <div class="cont_11">
   <! ––«***********Telefono1***************«––>
-        <mat-form-field appearance="fill" class="dictInput">
+        <mat-form-field appearance="fill" class="telInput">
           <mat-label>Celular 1</mat-label>
           <input (keydown)="check($event)" type="tel" matInput id="studentPhone1" formControlName="studentPhone1" required  minlength="10" maxlength="10" placeholder="098-027-5610">
           <mat-icon matSuffix>phone</mat-icon>
           <mat-error *ngIf="studentForm.invalid">{{msgValidateCelular()}}</mat-error>
         </mat-form-field>
         <! ––«***********Telefono2***************«––>
-        <mat-form-field class="dictInput" appearance="fill">
+        <mat-form-field  appearance="fill" class="telInput">
           <mat-label>Celular 2</mat-label>
           <input (keydown)="check($event)" type="tel" matInput id="studentPhone2" formControlName="studentPhone2" requered minlength="10" maxlength="10"  placeholder="098-027-5610">
           <mat-icon matSuffix>phone_android</mat-icon>

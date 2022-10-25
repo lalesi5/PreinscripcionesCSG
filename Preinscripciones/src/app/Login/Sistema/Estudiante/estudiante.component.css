@@ -4,13 +4,10 @@
   min-height: 100vh;
   margin: 0;
   padding: 0;
-
 }
-
 
 .student_info {
   padding: 60px 0;
-
   width: 80%;
   margin: 0 auto;
   /* background-color: #EAFAF1 ;*/
@@ -19,11 +16,9 @@
   align-items: center;
   gap: 3.5em;
 }
-
 form{
-  /* background: #F5B7B1;*/
+   /*background: #7FB3D5;*/
    width: 80%;
-
  }
 
  .class1{
@@ -35,22 +30,18 @@ form{
   gap: 2.3em;
   justify-content: space-between;
 }
-
-
 .class2{
   /*background-color: #B35E45;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .class3{
   /* background-color: #7D3C98;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .class5{
   /* background-color: #283747 ;*/
   display: flex;
@@ -58,23 +49,18 @@ form{
   justify-content: space-between;
 }
 .class9{
-  background-color: #283747 ;
+  /*background-color: #283747 ;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
-
 .class13{
-  background-color: #D4AC0D;
+ /* background-color: #D4AC0D;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
-
-
-
+/*COLUMNAS*/
 .columna1{
   /*background-color: #E67E22;*/
 width: 450px;
@@ -108,7 +94,7 @@ width: 450px;
   width: 450px;
 }
 .columna9{
-  background-color:  #616A6B;
+  /*background-color:  #616A6B;*/
   width: 450px;
 }
 .columna10{
@@ -118,22 +104,23 @@ width: 450px;
 .columna11{
   /* background-color: #F1C40F  ;*/
   width: 450px;
+
 }
 .columna12{
   /*background-color: #0B5345 ;*/
   width: 450px;
 }
 .columna13{
-  background-color: #D2B4DE  ;
+  /*background-color: #D2B4DE  ;*/
   width: 450px;
 }
 .columna14{
-   background-color: #7F8C8D;
+   /*background-color: #7F8C8D;*/
   width: 450px;
 }
 
-
-.cont_1{
+/*CONTENIDOS*/
+/*.cont_1{
   background-color: #EAFAF1;
 }
 .nivel{
@@ -168,8 +155,7 @@ width: 450px;
 }
 .cont_14{
   background-color: #EAFAF1;
-}
-
+}*/
 
 h4{
 margin-top: 10px;
@@ -178,15 +164,19 @@ margin-top: 10px;
   padding-top: 20px;
   width: 275px;
 }
-
 .dictInput{
-  background-color: #D4AC0D;
-  width: 400px;
+  /*background-color: #D4AC0D;*/
+  width: 275px;
 }
+.telInput{
+  /*background-color: #D4AC0D;*/
+  width: 275px;
+}
+
+
   .class1 .studentInput {
 /*  background: blueviolet;*/
  width: 275px;
-
  }
 
 
@@ -263,7 +253,6 @@ margin-top: 10px;
   padding-top: 1rem;
   width: 100%;
 }
-
 
 .example-radio-group {
   display: flex;
