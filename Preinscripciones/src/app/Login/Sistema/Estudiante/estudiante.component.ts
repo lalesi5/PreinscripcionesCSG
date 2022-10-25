@@ -117,11 +117,11 @@ constructor( private readonly student: FormBuilder) {
     return this.student.group ({
 
 
-      lastNameStudent :['', [Validators.required, Validators.minLength(50)]],
+      lastNameStudent :['', [Validators.required, Validators.maxLength(50)]],
 
 
       //ERROR DE NOMBRE
-      nameStudent: ['', [Validators.required, Validators.minLength(50)]],
+      nameStudent: ['', [Validators.required, Validators.maxLength(50)]],
 
       /*ERROR DE EMAIL
       email = new FormControl('', [Validators.required, Validators.email]);*/

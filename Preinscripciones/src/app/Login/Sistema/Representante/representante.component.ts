@@ -117,12 +117,12 @@ export class RepresentanteComponent implements OnInit {
     return this.representante.group({
 
       //ERROR DE APELLIDOS
-      lastNameParent: ['', [Validators.required, Validators.minLength(50)]],
+      lastNameParent: ['', [Validators.required, Validators.maxLength(50)]],
 
 
       //ERROR DE NOMBRES
       //name = new FormControl({
-      nameParent: ['', [Validators.required, Validators.minLength(50)]],
+      nameParent: ['', [Validators.required, Validators.maxLength(50)]],
 
 
       //ERROR DE EMAIL
