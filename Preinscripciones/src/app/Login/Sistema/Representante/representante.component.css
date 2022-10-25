@@ -1,6 +1,12 @@
 /* NOMBRES Y APELLIDOS*/
+body {
+  min-height: 100vh;
+  max-width: 1500px;
+  background-color: papayawhip;
+  margin: 0 auto;
+}
 .representantePrincipal {
-  /* background-color: #D4E6F1;*/
+   background-color: #D4E6F1;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -10,14 +16,14 @@
   padding: 60px 0;
   width: 80%;
   margin: 0 auto;
-  /* background-color: #EAFAF1 ;*/
+   background-color: #EAFAF1 ;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3.5em;
 }
 form{
-  background: #F1C40F;
+  /*background: #F1C40F;*/
   width: 80%;
 }
 
