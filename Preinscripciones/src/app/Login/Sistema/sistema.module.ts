@@ -32,7 +32,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
-import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
+import {MatCommonModule, MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
@@ -57,8 +57,9 @@ import {DialogModule} from '@angular/cdk/dialog';
 //COMPONENTES
 import { EstudianteComponent } from "./Estudiante/estudiante.component";
 import {RepresentanteComponent} from "./Representante/representante.component";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SistemaComponent} from "./sistema.component";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 
 
@@ -136,6 +137,11 @@ import {SistemaComponent} from "./sistema.component";
     ScrollingModule,
     DialogModule,
     ReactiveFormsModule,
+    FormsModule,
+
+
+
+
 
     //MODULOS DE PRUEBA
 

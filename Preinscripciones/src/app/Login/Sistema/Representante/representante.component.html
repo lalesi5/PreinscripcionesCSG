@@ -1,122 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div class="representantePrincipal">
+  <div class="representante_info">
+    <form [formGroup]="representanteForm" class="informationRepresentante">
+      <!––***********NOMBRES Y APELLIDOS***************––>
+      <h4> INFORMACION DEL REPRESENTANTE </h4>
 
-<h4> INFORMACION DEL REPRESENTANTE </h4>
+      <!--*************************APELLIDOS*************************-->
+      <div class="class1">
+        <mat-form-field class="parentInput" appearance="fill">
+          <mat-label>Apellido1 Apellido2</mat-label>
+          <input matInput formControlName="lastNameParent" required>
+          <mat-icon matPrefix> contacts</mat-icon>
+          <mat-error *ngIf="lastNameParent.hasError('required')">Ingrese sus apellidos</mat-error>
+        </mat-form-field>
+        <!--*************************NOMBRES*************************-->
+        <mat-form-field class="parentInput" appearance="fill">
+          <mat-label>Nombre1 Nombre2</mat-label>
+          <input matInput formControlName="nameParent" required>
+          <mat-icon matPrefix> contacts</mat-icon>
+          <mat-error *ngIf="nameParent.hasError('required')">Ingrese sus nombres</mat-error>
+        </mat-form-field>
+      </div>
 
-<table class="informationParents" cellspacing="0"><tr>
-  <td><mat-form-field class="informationParents" appearance="fill">
-    <mat-label>Apellido1 Apellido2</mat-label>
-    <input matInput>
-  </mat-form-field></td>
-  <td><mat-form-field class="informationParents" appearance="fill">
-    <mat-label>Nombre1 Nombre2</mat-label>
-    <input matInput>
-  </mat-form-field></td>
-</tr></table>
+      <! ––«***********TIPO DE IDENTIFICACIÓN***************«––>
+      <div class=" class2">
+        <div class="columna1">
+          <h4> TIPO DE IDENTIFICACION </h4>
+          <div class="cont_1">
+            <mat-radio-group class="buttonParentCI" labelPosition="before" formControlName="parentCI2" required
+                             aria-label="Seleccione el tipo de Identificación">
+              <mat-radio-button value="1">Cedula</mat-radio-button>
+              <mat-radio-button value="2">Pasaporte</mat-radio-button>
+              <mat-error *ngIf="parentCI.hasError('required') ">Elija una opcion</mat-error>
+            </mat-radio-group>
+            <mat-form-field appearance="fill" class="parentCI2">
+              <mat-label>Numero de Identificación</mat-label>
+              <input matInput id="parentCI2" (keydown)="check($event)" name="parentCI2" formControlName="parentCI2"
+                     minlength="10" maxlength="15">
+              <mat-icon matPrefix>perm_identity</mat-icon>
+              <mat-error *ngIf="parentCI2.invalid">{{msgValidateCedula()}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <! ––«***********MAIL***************«––>
+        <div class="columna2">
+          <h4> MAIL DE CONTACTO </h4>
+          <div class="cont_2">
+            <mat-form-field appearance="fill" class="representante_Email">
+              <mat-label>Email de Contacto</mat-label>
+              <input matInput id="email" name="email" formControlName="email" placeholder="pat@example.com">
+              <mat-icon matPrefix> contact_mail</mat-icon>
+              <mat-error *ngIf="representanteForm.invalid">{{msgValidateEmail()}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <! ––«***********PARENTEZCO***************«––>
+      <div class="class3">
+        <div class="columna3">
+          <h4> PARENTEZCO CON EL ESTUDIANTE </h4>
+          <div class="cont_3">
+            <h4>Seleccione una opcion</h4>
+            <mat-form-field appearance="fill" class="parentezco">
+              <mat-icon matPrefix>group</mat-icon>
+              <mat-label>Parentezco</mat-label>
+              <select formControlName="parentezco" required matNativeControl required>
+                <option value=""></option>
+                <option value="PADRE">PADRE</option>
+                <option value="MADRE">MADRE</option>
+                <option value="ABUELOS">ABUELO/A</option>
+                <option value="TIOS">TIO/A</option>
+                <option value="otro">Otro..</option>
+              </select>
+              <mat-error *ngIf="parentezco.hasError('required')">Campo requerido</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <! ––«***********PARENTEZCO2***************«––>
+        <div class="columna4">
+          <h4>Si la respuesta fue "Otro" </h4>
+          <div class="cont_4">
+            <h4>Escriba su respuesta:</h4>
+            <mat-form-field appearance="fill" class="parentezco">
+              <mat-label>Parentezco del Representante</mat-label>
+              <mat-icon matPrefix>group</mat-icon>
+              <input matInput placeholder=" ">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <! ––«***********DIRECCION***************«––>
+      <div class=" class5">
+        <div class="columna5">
+          <h4> DOMICILIO DEL REPRESENTANTE </h4>
+          <div class="cont_5">
+            <! ––«***********CIUDAD***************«––>
+            <mat-form-field class="dictInput" appearance="fill">
+              <mat-label>CANTON</mat-label>
+              <input matInput id="parentCity" name="parentCity" formControlName="parentCity" minlength="10" maxlength="150">
+              <mat-icon matPrefix>location_city</mat-icon>
+              <mat-error *ngIf="representanteForm.invalid">{{msgValidateTexto()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="dictInput" appearance="fill">
+              <mat-label>DIRECCION EXACTA</mat-label>
+              <input matInput id="parentAddress" name="parentAddress" formControlName="parentAddress" minlength="10" maxlength="150">
+              <mat-icon matPrefix>home</mat-icon>
+              <mat-error *ngIf="representanteForm.invalid">{{msgValidateTexto()}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
 
+      <! ––«****************CONTACTOS*******************«––>
+      <div class="columna7">
+        <h4> NUMEROS DE CONTACTO </h4>
+        <div class="cont_7">
+          <! ––«***********Telefono1***************«––>
+          <mat-form-field appearance="fill" class="telInput">
+            <mat-label>Telefono Convencional</mat-label>
+            <span matPrefix> </span>
+            <input (keydown)="check($event)" type="tel" matInput id="parentPhone1" formControlName="parentPhone1" required minlength="10" maxlength="10" placeholder="098-027-5610">
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-error *ngIf="representanteForm.invalid">{{msgValidateCelular()}}</mat-error>
+          </mat-form-field>
+          <! ––«***********Telefono2***************«––>
+          <mat-form-field appearance="fill" class="telInput">
+            <mat-label>Celular 2</mat-label>
+            <input (keydown)="check($event)" type="tel" matInput id="parentPhone2" formControlName="parentPhone2"
+                   requered minlength="10" maxlength="10" placeholder="098-027-5610">
+            <mat-icon matSuffix>phone_android</mat-icon>
+            <mat-error *ngIf="representanteForm.invalid">{{msgValidateCelular()}}</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      </div>
 
+        <button id="button1" type="submit" mat-raised-button>Guardar<mat-icon matPrefix>save</mat-icon></button>
 
-
-<! ––«***********TIPO DE IDENTIFICACIÓN***************«––>
-
-<h4> TIPO DE IDENTIFICACION </h4>
-
-<mat-radio-group aria-label="Seleccione el tipo de Identificación">
-  <mat-radio-button value="1">Cedula</mat-radio-button>
-  <mat-radio-button value="2">Pasaporte</mat-radio-button>
-</mat-radio-group>
-
-<form class="inputCIParents">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Numero de Identificación</mat-label>
-    <input matInput placeholder="Ex. 1723885826" value="">
-  </mat-form-field>
-</form>
-
-
-
-<! ––«***********PARENTEZCO***************«––>
-
-
-<h4> PARENTEZCO CON EL ESTUDIANTE </h4>
-
-<div class="studentParent">
-  <h4>Seleccione una opcion</h4>
-  <mat-form-field appearance="fill">
-    <mat-label>Parentezco</mat-label>
-    <select matNativeControl required>
-      <option value=""> </option>
-      <option value="PADRE">PADRE</option>
-      <option value="MADRE">MADRE</option>
-      <option value="ABUEL@">ABUELO/A</option>
-      <option value="TI@">TIO/A</option>
-      <option value="otro">Otro..</option>
-    </select>
-  </mat-form-field>
+    </form>
+  </div>
 </div>
-
-<p>
-<h4>Si la respuesta fue "Otro" escriba su respuesta</h4>
-
-<mat-form-field class="studentParent2" appearance="fill">
-  <mat-label>Parentezco del Representante</mat-label>
-  <textarea matInput placeholder=" "></textarea>
-</mat-form-field>
+</body>
+</html>
 
 
-
-<! ––«***********DIRECCION***************«––>
-<h4> DOMICILIO DEL REPRESENTANTE </h4>
-<! ––«***********CIUDAD***************«––>
-<p>
-  <mat-form-field class="cityParent" appearance="fill">
-    <mat-label>CIUDAD</mat-label>
-    <textarea matInput placeholder=" "></textarea>
-  </mat-form-field>
-</p>
-
-
-<p>
-  <mat-form-field class="addressParent" appearance="fill">
-    <mat-label>Direccion Exacta</mat-label>
-    <textarea matInput placeholder=" "></textarea>
-  </mat-form-field>
-</p>
-
-
-<! ––«***********MAIL***************«––>
-
-<h4> MAIL DE CONTACTO </h4>
-
-<div class="emailContactParent">
-  <mat-form-field appearance="fill">
-    <mat-label>Email de Contacto</mat-label>
-    <input matInput placeholder="pat@example.com" [formControl]="email" required>
-    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-  </mat-form-field>
-</div>
-
-
-
-
-<! ––«****************CONTACTOS*******************«––>
-<h4> NUMEROS DE CONTACTO </h4>
-
-<! ––«***********Telefono1***************«––>
-
-<form class="phoneParent1">
-  <mat-form-field class="Numero de Contacto de Representante1" appearance="fill">
-    <mat-label>Telefono Convencional</mat-label>
-    <span matPrefix>"593"  &nbsp;</span>
-    <input type="tel" matInput placeholder="02-2828441">
-    <mat-icon matSuffix>mode_edit</mat-icon>
-  </mat-form-field>
-</form>
-
-<! ––«***********Telefono2***************«––>
-<form class="phoneParent2">
-  <mat-form-field class="Numero de Contacto de Representante1" appearance="fill">
-    <mat-label>Celular </mat-label>
-    <span matPrefix>+593 &nbsp;</span>
-    <input type="tel" matInput placeholder="098-027-5610">
-    <mat-icon matSuffix>mode_edit</mat-icon>
-  </mat-form-field>
-</form>

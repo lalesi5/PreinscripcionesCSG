@@ -7,6 +7,7 @@
     <title>Login</title>
 </head>
 <body>
+<<<<<<< HEAD
     <div class="acceso">
         <mat-card class="register">
             <mat-card-title class="tittle">Acceso al Sistema de Preinscripciones</mat-card-title> 
@@ -31,5 +32,33 @@
           </mat-card>
     </div>
     
+=======
+<div class="principal1">
+  <div class="login">
+    <mat-card class="credencial">
+      <mat-card-title class="tittle">Acceso al Sistema de Preinscripciones</mat-card-title>
+      <mat-card-content>
+        <form (ngSubmit)="onSubmit()" [formGroup] ="dataForm">
+          <mat-form-field appearance="fill">
+            <mat-label>Número de identificación</mat-label>
+            <input class="form-control" id="cedula" name="cedula" formControlName="cedula" matInput placeholder="1725542961" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Clave</mat-label>
+            <input matInput type="password" formControlName="clave" required>
+          </mat-form-field>
+          <button id="button2" type="submit" [disabled]="dataForm.invalid" routerLink="/sistema" mat-raised-button>Enviar</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="inf">
+      <mat-card-content class="fondo">
+        <img mat-card-image src="https://www.csgabriel.edu.ec/wp-content/uploads/2022/03/08.Regreso7-mar.jpg" alt="Photo of a Shiba Inu">
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+>>>>>>> 401b95c5dfe4058599edddc7f56bd7dd5bd95528
 </body>
 </html>

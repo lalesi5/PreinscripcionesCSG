@@ -1,47 +1,93 @@
-<mat-stepper #stepper>
-  <mat-step>
-    <form [formGroup]="firstFormGroup">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+
+<body>
+
+<!PRIMERA PÁGINA>
+
+<div class="contiene_sis">
+
+
+  <mat-stepper #stepper>
+    <mat-step>
+
       <ng-template matStepLabel>INFORMACIÓN</ng-template>
 
-            <div>
-        <p></p>
-        <button mat-button matStepperNext >Siguiente</button>
-      </div>
-
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup" errorMessage="Llenar todos los campos.">
-    <form  [formGroup]="secondFormGroup">
-      <ng-template  matStepLabel>ESTUDIANTE</ng-template>
-
       <div>
-
-        <!COMPONENTE ESTUDIANTE>
-        <app-estudiante></app-estudiante>
-        <button  mat-button matStepperPrevious>Atrás</button>
-        <button mat-button matStepperNext>Siguiente</button>
+        <p></p>
+        <button mat-button matStepperNext>Siguiente
+          <mat-icon matPrefix>skip_next</mat-icon>
+        </button>
       </div>
-    </form>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>REPRESENTANTE</ng-template>
+
+
+    </mat-step>
+
+    <!SEGUNDA PÁGINA>
+
+    <mat-step [stepControl]="secondFormGroup" errorMessage="Llenar todos los campos.">
+
+      <ng-template matStepLabel>ESTUDIANTE</ng-template>
+
+      <!COMPONENTE ESTUDIANTE>
+      <div>
+        <app-estudiante></app-estudiante>
+        <div></div>
+        <button mat-button matStepperPrevious>Atrás
+          <mat-icon>skip_previous</mat-icon>
+        </button>
+
+        <button mat-button matStepperNext>Siguiente
+          <mat-icon matPrefix>skip_next</mat-icon>
+        </button>
+      </div>
+
+    </mat-step>
 
     <!COMPONENTE REPRESENTANTE>
 
-    <app-representante></app-representante>
-    <div>
-      <button mat-button matStepperPrevious>Atrás</button>
-      <button mat-button matStepperNext>Siguiente</button>
-    </div>
-  </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" errorMessage="Llenar todos los campos.">
 
-  <mat-step>
-    <ng-template matStepLabel>FINALIZAR</ng-template>
-    <p>Estudiante Inscrito.</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Inscribir Nuevo Estudiante</button>
-    </div>
-  </mat-step>
+      <ng-template matStepLabel>REPRESENTANTE</ng-template>
 
-</mat-stepper>
+      <!COMPONENTE REPRESENTANTE>
+
+      <app-representante></app-representante>
+      <div></div>
+      <button mat-button matStepperPrevious>Atrás
+        <mat-icon matPrefix>skip_previous</mat-icon>
+      </button>
+      <button mat-button matStepperNext>Siguiente
+        <mat-icon matPrefix>skip_next</mat-icon>
+      </button>
+
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>FINALIZAR</ng-template>
+      <p>Estudiante Inscrito.</p>
+
+      <div></div>
+      <div>
+        <button mat-button matStepperPrevious>Back
+          <mat-icon matPrefix>skip_previous</mat-icon>
+        </button>
+        <button mat-button (click)="stepper.reset()">Inscribir Nuevo Estudiante
+          <mat-icon matSuffix>person_add</mat-icon>
+        </button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+
+
+</div>
+</body>
+</html>

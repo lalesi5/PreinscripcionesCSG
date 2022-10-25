@@ -1,4 +1,166 @@
 /* NOMBRES Y APELLIDOS*/
+body {
+  min-height: 100vh;
+  max-width: 1500px;
+  background-color: papayawhip;
+  margin: 0 auto;
+}
+.representantePrincipal {
+   background-color: #D4E6F1;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.representante_info {
+  padding: 60px 0;
+  width: 80%;
+  margin: 0 auto;
+   background-color: #EAFAF1 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5em;
+}
+form{
+  /*background: #F1C40F;*/
+  width: 80%;
+}
+
+.class1{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*background-color: #45B39D ;*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.3em;
+  justify-content: flex-start;
+}
+.class2{
+  /*background-color: #B35E45;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+;
+}
+.class3{
+  /* background-color: #7D3C98;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.class5{
+  /*background-color: #283747 ;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.class8{
+  /* background-color: #7D3C98;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/*COLUMNAS*/
+.columna1{
+  /*background-color: #E67E22;*/
+  width: 450px;
+}
+.columna2{
+  /*background-color: #CB4335 ;*/
+  width: 450px;
+}
+.columna3{
+  /* background-color: #707B7C  ;*/
+  width: 450px;
+}
+.columna4{
+  /* background-color: #76D7C4 ;*/
+  width: 450px;
+}
+.columna5{
+  /*background-color: #5499C7 ;*/
+  width: 450px;
+}
+.columna6{
+  /*background-color: #626567 ;*/
+  width: 450px;
+}
+.columna7{
+  /* background-color: #922B21 ;*/
+  width: 450px;
+}
+.columna8{
+  /*background-color: #1D8348 ;*/
+  width: 450px;
+}
+
+
+.class1 .representanteInput {
+  /*  background: blueviolet;*/
+  width: 275px;
+}
+
+h4{
+  margin-top: 10px;
+}
+.dictInput{
+  /*background-color: #D4AC0D;*/
+  width: 275px;
+}
+.telInput{
+  /*background-color: #D4AC0D;*/
+  width: 275px;
+}
+.representante_Email{
+  width: 275px;
+}
+.parentezco {
+
+  width: 275px;
+}
+.parentCI2{
+  padding-top: 20px;
+  width: 275px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .informationParents {
   min-width: 150px;
   max-width: 500px;
@@ -49,16 +211,22 @@
 
 }
 
-
-.wrapper-button{
+.wrapper-button {
   padding-top: 1rem;
   width: 100%;
 }
 
-.w-100{
-  width: 100%;
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
 }
 
-td {
-  padding-right: 8px;
+.example-radio-button {
+  margin: 5px;
+}
+
+.w-100 {
+  width: 100%;
 }
