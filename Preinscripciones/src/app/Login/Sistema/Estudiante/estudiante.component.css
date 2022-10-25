@@ -18,14 +18,13 @@
 }
 
 form{
-   background: #7FB3D5;
    width: 80%;
  }
 
 @media (max-width:1000px){
   .student_info{
     width: 100%;
-    background-color: blue;
+
   }
   form{
     width: 100%;
@@ -35,11 +34,9 @@ form{
 @media (min-width:1000px){
   form{
     width: 1070px;
-    background-color:red;
+
   }
 }
-
-
 
  .class1{
    padding-top: 10px;
@@ -79,6 +76,13 @@ form{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.class15{
+  /* background-color: #D4AC0D;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 30px;
 }
 /*COLUMNAS*/
 .columna1{
