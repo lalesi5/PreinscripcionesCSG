@@ -53,6 +53,7 @@ import {CdkMenuModule} from '@angular/cdk/menu';
 import {DialogModule} from '@angular/cdk/dialog';
 
 
+
 //MODULOS DE PRUEBA
 //COMPONENTES
 import { EstudianteComponent } from "./Estudiante/estudiante.component";
@@ -60,6 +61,7 @@ import {RepresentanteComponent} from "./Representante/representante.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {InicioComponent} from "./Inicio/inicio.component";
 import {FinalizarComponent} from "./Finalizar/finalizar.component";
+import {NavbarComponent} from "./Navbar/navbar.component";
 
 
 
@@ -125,7 +127,8 @@ import {FinalizarComponent} from "./Finalizar/finalizar.component";
     EstudianteComponent,
     RepresentanteComponent,
     InicioComponent,
-    FinalizarComponent
+    FinalizarComponent,
+    NavbarComponent
   ],
   exports: [
     CommonModule,
@@ -139,6 +142,7 @@ import {FinalizarComponent} from "./Finalizar/finalizar.component";
     MatMenuModule,
     FormsModule,
     ReactiveFormsModule,
+    NavbarComponent,
 
   ],
 
