@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
+
+
 
 @Component({
   selector: 'app-acceso',
@@ -7,41 +10,24 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./acceso.component.css']
 })
 export class AccesoComponent implements OnInit {
-<<<<<<< HEAD
-=======
+
   emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,4}))$/;
   allowedChars = new Set('0123456789'.split('').map(c => c.charCodeAt(0)));
-
   dataForm!: FormGroup;
->>>>>>> 401b95c5dfe4058599edddc7f56bd7dd5bd95528
 
-  dataForm: FormGroup;
-  
-  constructor(private readonly fb: FormBuilder) {
-    this.dataForm = this.fb.group({
-      cedula: ['',[Validators.required]],
-      email: ['',[Validators.required]]
-    })
-   }
+
+  constructor(private readonly fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
-<<<<<<< HEAD
 
-  }
-
-  onSubmit(): void {
-  console.log("envia credenciales");
-  }
-
-  
-
-
-=======
     this.dataForm = this.initForm();
   }
   onSubmit (): void{
-    console.log('Hola');
+    console.log('Form ->',this.dataForm.value);
+    this.router.navigate(['login']);
+
   }
+
   initForm (): FormGroup{
     return this.fb.group({
       email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
@@ -71,6 +57,5 @@ export class AccesoComponent implements OnInit {
     }
   }
 
->>>>>>> 401b95c5dfe4058599edddc7f56bd7dd5bd95528
 
 }

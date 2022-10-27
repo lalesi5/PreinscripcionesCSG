@@ -17,14 +17,26 @@
       <!--*************************APELLIDOS*************************-->
       <div class="class1">
         <mat-form-field class="parentInput" appearance="fill">
-          <mat-label>Apellido1 Apellido2</mat-label>
+          <mat-label>Primer Apellido</mat-label>
+          <input matInput formControlName="lastNameParent" required>
+          <mat-icon matPrefix> contacts</mat-icon>
+          <mat-error *ngIf="lastNameParent.hasError('required')">Ingrese sus apellidos</mat-error>
+        </mat-form-field>
+        <mat-form-field class="parentInput" appearance="fill">
+          <mat-label>Segundo Apellido</mat-label>
           <input matInput formControlName="lastNameParent" required>
           <mat-icon matPrefix> contacts</mat-icon>
           <mat-error *ngIf="lastNameParent.hasError('required')">Ingrese sus apellidos</mat-error>
         </mat-form-field>
         <!--*************************NOMBRES*************************-->
-        <mat-form-field class="parentInput" appearance="fill">
-          <mat-label>Nombre1 Nombre2</mat-label>
+        <mat-form-field class="parentInput1" appearance="fill">
+          <mat-label>Primer Nombre</mat-label>
+          <input matInput formControlName="nameParent" required>
+          <mat-icon matPrefix> contacts</mat-icon>
+          <mat-error *ngIf="nameParent.hasError('required')">Ingrese sus nombres</mat-error>
+        </mat-form-field>
+        <mat-form-field class="parentInput1" appearance="fill">
+          <mat-label>Segundo Nombre</mat-label>
           <input matInput formControlName="nameParent" required>
           <mat-icon matPrefix> contacts</mat-icon>
           <mat-error *ngIf="nameParent.hasError('required')">Ingrese sus nombres</mat-error>
@@ -143,7 +155,13 @@
       </div>
       </div>
 
+      <div class="class9">
+        <div class="columna9">
+          <div class="cont_9">
         <button id="button1" type="submit" mat-raised-button>Guardar<mat-icon matPrefix>save</mat-icon></button>
+          </div>
+        </div>
+      </div>
 
     </form>
   </div>

@@ -28,7 +28,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
-import {MatIconModule} from '@angular/material/icon';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
@@ -53,36 +53,21 @@ import {CdkMenuModule} from '@angular/cdk/menu';
 import {DialogModule} from '@angular/cdk/dialog';
 
 
+
 //MODULOS DE PRUEBA
 //COMPONENTES
 import { EstudianteComponent } from "./Estudiante/estudiante.component";
 import {RepresentanteComponent} from "./Representante/representante.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {SistemaComponent} from "./sistema.component";
-import {MatFormFieldModule} from "@angular/material/form-field";
+import {InicioComponent} from "./Inicio/inicio.component";
+import {FinalizarComponent} from "./Finalizar/finalizar.component";
+import {NavbarComponent} from "./Navbar/navbar.component";
+
 
 
 
 @NgModule({
-  declarations: [
-    SistemaComponent,
-    EstudianteComponent,
-    RepresentanteComponent
-  ],
-  exports: [
-    EstudianteComponent,
-<<<<<<< HEAD
-    PadreComponent,
-    MadreComponent
-  ],
 
-    imports: [
-      CommonModule,
-      SistemaRoutingModule
-]
-=======
-    RepresentanteComponent
-  ],
 
   imports: [
     CommonModule,
@@ -138,19 +123,30 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     DialogModule,
     ReactiveFormsModule,
     FormsModule,
-
-
-
-
-
     //MODULOS DE PRUEBA
-
-<<<<<<< HEAD
   ],
->>>>>>> cf9822774bd50263156f24dfa7f2a762a8799aad
-=======
+  declarations: [
+    EstudianteComponent,
+    RepresentanteComponent,
+    InicioComponent,
+    FinalizarComponent,
+    NavbarComponent
+  ],
+  exports: [
+    CommonModule,
+    MatCardModule,
+    MatInputModule,
+    MatIconModule,
+    MatIcon,
+    MatRadioModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatMenuModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NavbarComponent,
 
-  ]
->>>>>>> 3089881721ee43388683072590059ba7da755ee0
+  ],
+
 })
   export class SistemaModule{}

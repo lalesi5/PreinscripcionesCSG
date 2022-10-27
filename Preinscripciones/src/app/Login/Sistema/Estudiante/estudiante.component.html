@@ -10,28 +10,44 @@
 <body>
 <div class="studentPrincipal">
   <div class="student_info">
-    <form [formGroup]="studentForm" class="informationStudent">
+    <form (ngSubmit)="onSubmit()" [formGroup]="studentForm" class="informationStudent">
       <!––***********NOMBRES Y APELLIDOS***************––>
       <h4> INFORMACION DEL ESTUDIANTE </h4>
 
       <!--*************************APELLIDOS*************************-->
         <div class="class1">
           <mat-form-field class="studentInput" appearance="fill">
-            <mat-label>Apellido1 Apellido2</mat-label>
+            <mat-label>Apellido1 </mat-label>
+            <input matInput formControlName="lastNameStudent" required>
+            <mat-icon matPrefix> contacts</mat-icon>
+            <mat-error *ngIf="lastNameStudent.hasError('required') ">Ingrese sus apellidos</mat-error>
+          </mat-form-field>
+          <mat-form-field class="studentInput" appearance="fill">
+            <mat-label>Apellido2</mat-label>
             <input matInput formControlName="lastNameStudent" required>
             <mat-icon matPrefix> contacts</mat-icon>
             <mat-error *ngIf="lastNameStudent.hasError('required') ">Ingrese sus apellidos</mat-error>
           </mat-form-field>
   <!--*************************NOMBRES*************************-->
-          <mat-form-field class="studentInput" appearance="fill">
-            <mat-label>Nombre1 Nombre2</mat-label>
+          <mat-form-field class="studentInput1" appearance="fill">
+            <mat-label>Nombre1</mat-label>
             <input matInput formControlName="nameStudent" required>
             <mat-icon matPrefix> contacts</mat-icon>
             <mat-error *ngIf="nameStudent.hasError('required') ">Ingrese sus nombres</mat-error>
           </mat-form-field>
+          <mat-form-field class="studentInput1" appearance="fill">
+            <mat-label>Nombre2</mat-label>
+            <input matInput formControlName="nameStudent" required>
+            <mat-icon matPrefix> contacts</mat-icon>
+            <mat-error *ngIf="nameStudent.hasError('required') ">Ingrese sus nombres</mat-error>
+          </mat-form-field>
+        </div>
 
   <! ––«***********FECHA DE NACIMIENTO***************«––>
- <mat-form-field class="studentInput"  appearance="fill">
+      <div class=" class2">
+        <div class="columnaDate">
+          <h4>FECHA DE NACIMIENTO</h4>
+          <mat-form-field class="dateInput"  appearance="fill">
     <mat-label>Fecha De Nacimiento</mat-label>
     <input matInput  formControlName="dateStudent" required  [matDatepicker]="picker">
     <mat-error *ngIf="dateStudent.hasError('required') ">
@@ -41,10 +57,10 @@
     <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker>
     </mat-datepicker>
-  </mat-form-field>  </div>
+  </mat-form-field>
 
   <! ––«***********TIPO DE IDENTIFICACIÓN***************«––>
-  <div class=" class2">
+
     <div class="columna1">
       <h4> TIPO DE IDENTIFICACION </h4>
       <div class="cont_1">
@@ -61,7 +77,9 @@
         </mat-form-field>
       </div>
     </div>
-    <! ––«***********CON QUIENES VIVE***************«––>
+      </div>
+
+      <! ––«***********CON QUIENES VIVE***************«––>
     <div class="columna2">
       <h4>CON QUIEN VIVE EL ESTUDIANTE</h4>
       <div class="cont_2">
@@ -117,8 +135,7 @@
       <mat-label>INSTITUCIÓN DE PROCEDENCIA</mat-label>
       <textarea matInput formControlName="studentInstitution" required  placeholder=" "></textarea>
       <mat-icon matPrefix>school</mat-icon>
-      <mat-error *ngIf="this.studentInstitution">{{getErrorMessage()}}
-      </mat-error>
+      <mat-error *ngIf="studentInstitution.hasError('required')">Campo requerido</mat-error>
     </mat-form-field>
       </div>
     </div>
@@ -261,9 +278,13 @@
   </mat-error>
     </div>
     </div>
-  <button id="button1" type="submit" mat-raised-button>Guardar<mat-icon matPrefix>save</mat-icon></button>
+    <div class="class15">
+      <div class="columna15">
 
+      </div>
+    </div>
   </div>
+        <button mat-raised-button id="button5" type="submit" mat-raised-button>Guardar<mat-icon matPrefix>save</mat-icon></button>
 </form>
 </div>
 </div>

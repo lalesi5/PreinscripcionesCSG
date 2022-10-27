@@ -40,7 +40,8 @@ import { RouterModule } from "@angular/router";
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+
 
 
   ],

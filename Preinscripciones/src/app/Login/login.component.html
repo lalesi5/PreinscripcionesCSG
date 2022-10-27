@@ -7,32 +7,6 @@
     <title>Login</title>
 </head>
 <body>
-<<<<<<< HEAD
-    <div class="acceso">
-        <mat-card class="register">
-            <mat-card-title class="tittle">Acceso al Sistema de Preinscripciones</mat-card-title> 
-            <mat-card-content>
-                <form (ngSubmit)="onSubmit()" [formGroup] ="dataForm">      
-                    <mat-form-field appearance="fill">
-                        <mat-label>Número de identificación</mat-label>
-                        <input class="form-control" id="cedula" name="cedula" formControlName="cedula" matInput placeholder="1725542961" required>                                    
-                    </mat-form-field>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Clave</mat-label>
-                        <input matInput type="password" formControlName="clave" required>               
-                    </mat-form-field>
-                    <button type="submit" [disabled]="dataForm.invalid" id="botton1" mat-raised-button color="primary">Enviar</button>     
-                </form>
-            </mat-card-content>
-          </mat-card>
-          <mat-card class="information">
-            <mat-card-content>
-                <img src="dinosaur.jpg">
-            </mat-card-content>
-          </mat-card>
-    </div>
-    
-=======
 <div class="principal1">
   <div class="login">
     <mat-card class="credencial">
@@ -40,14 +14,14 @@
       <mat-card-content>
         <form (ngSubmit)="onSubmit()" [formGroup] ="dataForm">
           <mat-form-field appearance="fill">
-            <mat-label>Número de identificación</mat-label>
+            <mat-label>Usuario</mat-label>
             <input class="form-control" id="cedula" name="cedula" formControlName="cedula" matInput placeholder="1725542961" required>
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Clave</mat-label>
             <input matInput type="password" formControlName="clave" required>
           </mat-form-field>
-          <button id="button2" type="submit" [disabled]="dataForm.invalid" routerLink="/sistema" mat-raised-button>Enviar</button>
+          <button mat-raised-button color="primary" id="button2" type="submit" [disabled]="dataForm.invalid" mat-raised-button>Enviar</button>
         </form>
       </mat-card-content>
     </mat-card>
@@ -59,6 +33,5 @@
     </mat-card>
   </div>
 </div>
->>>>>>> 401b95c5dfe4058599edddc7f56bd7dd5bd95528
 </body>
 </html>
