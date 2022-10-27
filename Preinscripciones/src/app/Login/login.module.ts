@@ -3,17 +3,22 @@ import { CommonModule } from "@angular/common";
 
 //MODULOS
 import { LoginRoutingModule } from "./login-routing.module";
+import {SistemaComponent} from "./Sistema/sistema.component";
+import {RouterOutlet} from "@angular/router";
+
 
 //COMPONENTES
-import { SistemaComponent } from "./Sistema/sistema.component";
 
 
 @NgModule({
-    declarations: [
-        SistemaComponent
+  imports: [
+    CommonModule,
+    LoginRoutingModule,
+    RouterOutlet,
+  ],
+  declarations: [
+      SistemaComponent
     ],
-    imports: [CommonModule,
-    LoginRoutingModule]
-
+  exports: [ CommonModule]
 })
 export class LoginModule{}

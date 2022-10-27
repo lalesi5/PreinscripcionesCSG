@@ -28,7 +28,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
-import {MatIconModule} from '@angular/material/icon';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
@@ -58,22 +58,13 @@ import {DialogModule} from '@angular/cdk/dialog';
 import { EstudianteComponent } from "./Estudiante/estudiante.component";
 import {RepresentanteComponent} from "./Representante/representante.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {SistemaComponent} from "./sistema.component";
-import {MatFormFieldModule} from "@angular/material/form-field";
+import {InicioComponent} from "./Inicio/inicio.component";
+import {FinalizarComponent} from "./Finalizar/finalizar.component";
+
 
 
 
 @NgModule({
-  declarations: [
-    SistemaComponent,
-    EstudianteComponent,
-    RepresentanteComponent
-  ],
-  exports: [
-    EstudianteComponent,
-    RepresentanteComponent
-  ],
-
   imports: [
     CommonModule,
     SistemaRoutingModule,
@@ -128,14 +119,29 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     DialogModule,
     ReactiveFormsModule,
     FormsModule,
-
-
-
-
-
     //MODULOS DE PRUEBA
+  ],
+  declarations: [
+    EstudianteComponent,
+    RepresentanteComponent,
+    InicioComponent,
+    FinalizarComponent
+  ],
+  exports: [
+    CommonModule,
+    MatCardModule,
+    MatInputModule,
+    MatIconModule,
+    MatIcon,
+    MatRadioModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatMenuModule,
+    FormsModule,
+    ReactiveFormsModule,
+
+  ],
 
 
-  ]
 })
   export class SistemaModule{}

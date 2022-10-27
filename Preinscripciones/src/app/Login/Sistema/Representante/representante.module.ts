@@ -6,16 +6,17 @@ import {RepresentanteRoutingModule} from "./representante-routing.module";
 
 
 //COMPONENTES
-import {SistemaComponent} from "../sistema.component";
 
 
 @NgModule({
-  declarations: [
-    SistemaComponent
-  ],
   imports: [CommonModule,
-  RepresentanteRoutingModule
-  ]
+    RepresentanteRoutingModule
+  ],
+  declarations: [
+  ],
+  exports:[
+    CommonModule
+]
 
 })
 export class RepresentanteModule{}

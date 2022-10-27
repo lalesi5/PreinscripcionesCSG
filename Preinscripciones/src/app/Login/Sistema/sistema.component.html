@@ -6,68 +6,11 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
 </head>
 <body>
-<!PRIMERA PÁGINA>
-<div class="contiene_sis">
-  <mat-stepper #stepper>
-    <mat-step>
-      <ng-template matStepLabel>INFORMACIÓN</ng-template>
-      <div>
-        <p></p>
-        <button mat-button matStepperNext>Siguiente
-          <mat-icon matPrefix>skip_next</mat-icon>
-        </button>
-      </div>
-    </mat-step>
-    <!SEGUNDA PÁGINA>
-    <mat-step [stepControl]="secondFormGroup" errorMessage="Llenar todos los campos.">
-      <ng-template matStepLabel>ESTUDIANTE</ng-template>
-      <!COMPONENTE ESTUDIANTE>
-      <div>
-        <app-estudiante></app-estudiante>
-        <div class="class1">
-          <div class="columna1">
-            <button mat-raised-button matStepperPrevious color="primary" style="margin: 10px">Atrás
-              <mat-icon>skip_previous</mat-icon>
-            </button>
-            <button mat-raised-button matStepperNext color="primary" style="margin: 10px">Siguiente
-              <mat-icon matPrefix>skip_next</mat-icon>
-            </button>
-          </div>
-        </div>
-      </div>
-    </mat-step>
-    <!COMPONENTE REPRESENTANTE>
-    <mat-step [stepControl]="thirdFormGroup" errorMessage="Llenar todos los campos.">
-      <ng-template matStepLabel>REPRESENTANTE</ng-template>
-      <!COMPONENTE REPRESENTANTE>
-      <app-representante></app-representante>
-      <div class="class1">
-        <div class="columna1">
-          <button mat-raised-button matStepperPrevious color="primary" style="margin: 10px">Atrás
-            <mat-icon>skip_previous</mat-icon>
-          </button>
-          <button mat-raised-button matStepperNext color="primary" style="margin: 10px">Siguiente
-            <mat-icon matPrefix>skip_next</mat-icon>
-          </button>
-        </div>
-      </div>
-    </mat-step>
-
-    <mat-step>
-      <ng-template matStepLabel>FINALIZAR</ng-template>
-      <p>Estudiante Inscrito.</p>
-      <div>
-        <button mat-button matStepperPrevious>Back
-          <mat-icon matPrefix>skip_previous</mat-icon>
-        </button>
-        <button mat-button (click)="stepper.reset()">Inscribir Nuevo Estudiante
-          <mat-icon matSuffix>person_add</mat-icon>
-        </button>
-      </div>
-    </mat-step>
-  </mat-stepper>
-</div>
+<h4>Sistema Funciona</h4>
+<router-outlet></router-outlet>
 </body>
 </html>
+

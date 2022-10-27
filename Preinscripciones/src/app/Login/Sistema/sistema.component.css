@@ -1,6 +1,13 @@
 .contiene_sis{
   height: 100vh !important;
+  top: 0;
+  right: 0;
  /* background-image: url("src/fondo.jpg");*/
+}
+.logo{
+  top: 0;
+  right: 0;
+  object-position: right;
 }
 .class1{
  /*  background-color: #D4AC0D;*/
@@ -10,3 +17,4 @@
   justify-content: center;
   padding-top: 30px;
 }
+

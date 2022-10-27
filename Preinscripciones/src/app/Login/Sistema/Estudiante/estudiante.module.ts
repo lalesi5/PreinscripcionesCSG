@@ -12,7 +12,6 @@ import {HttpClientModule} from '@angular/common/http';
 
 
 //COMPONENTES
-import { SistemaComponent } from "../sistema.component";
 import {SistemaModule} from "../sistema.module";
 import {MatTabsModule} from "@angular/material/tabs";
 import {RouterLink, RouterLinkActive} from "@angular/router";
@@ -28,9 +27,6 @@ import {MatStepperModule} from "@angular/material/stepper";
 
 
 @NgModule({
-    declarations: [
-        SistemaComponent
-    ],
   imports: [CommonModule,
     EstudianteRoutingModule,
     SistemaModule,
@@ -55,8 +51,10 @@ import {MatStepperModule} from "@angular/material/stepper";
     MatInputModule,
     FormsModule, MatStepperModule
   ],
-  providers: [],
-  bootstrap: [SistemaComponent]
+
+  declarations: [
+    ],
+
 
 })
   export class EstudianteModule{}

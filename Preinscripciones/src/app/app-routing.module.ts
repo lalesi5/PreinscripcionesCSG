@@ -5,27 +5,25 @@ import {LoginComponent} from "./Login/login.component";
 
 
 
+
 const routes: Routes = [
 
   {path: '', redirectTo: 'acceso', pathMatch: 'full'},
 
   {path: 'acceso', component: AccesoComponent},
-  {path: 'login', component: LoginComponent},
-
-  {path: 'sistema', loadChildren: () => import('../app/Login/Sistema/sistema.module').then(m => m.SistemaModule)},
-
-  {path: '**', redirectTo: 'sistema'}
+  //{path: 'login', component: LoginComponent},
+   {
+     path: 'login',
+    loadChildren: () => import('./Login/login.module').then(m => m.LoginModule)},
+  {path: '**', redirectTo: 'acceso', pathMatch: 'full'}
 
 ];
 
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, {useHash: true})
-  ],
-  exports: [
-    [RouterModule]
-  ]
+    RouterModule.forRoot(routes, {useHash: true})],
+  exports: [RouterModule]
+
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule { }

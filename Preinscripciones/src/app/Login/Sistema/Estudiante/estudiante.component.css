@@ -12,7 +12,7 @@
   margin: 0 auto;
    background-color: #EAFAF1 ;
   display: flex;
-  justify-content: center;
+  justify-content: space-around ;
   align-items: center;
   gap: 3.5em;
 }
@@ -34,7 +34,6 @@ form{
 @media (min-width:1000px){
   form{
     width: 1070px;
-
   }
 }
 
@@ -192,12 +191,16 @@ margin-top: 10px;
   /*background-color: #D4AC0D;*/
   width: 275px;
 }
+.dictInput1{
+  /*background-color: #D4AC0D;*/
+  width: 275px;
+}
 .telInput{
   /*background-color: #D4AC0D;*/
   width: 275px;
 }
 
-.class1 .studentInput {
+.class1 .studentInput .studentInput1 {
 /*  background: blueviolet;*/
  width: 275px;
  }

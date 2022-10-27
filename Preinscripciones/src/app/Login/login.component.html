@@ -15,14 +15,14 @@
       <mat-card-content>
         <form (ngSubmit)="onSubmit()" [formGroup] ="dataForm">
           <mat-form-field appearance="fill">
-            <mat-label>Número de identificación</mat-label>
+            <mat-label>Usuario</mat-label>
             <input class="form-control" id="cedula" name="cedula" formControlName="cedula" matInput placeholder="1725542961" required>
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Clave</mat-label>
             <input matInput type="password" formControlName="clave" required>
           </mat-form-field>
-          <button id="button2" type="submit" [disabled]="dataForm.invalid" routerLink="/sistema" mat-raised-button>Enviar</button>
+          <button mat-raised-button color="primary" id="button2" type="submit" [disabled]="dataForm.invalid" mat-raised-button>Enviar</button>
         </form>
       </mat-card-content>
     </mat-card>
@@ -36,3 +36,4 @@
 </div>
 </body>
 </html>
+<router-outlet></router-outlet>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 export class LoginComponent implements OnInit {
   dataForm!: FormGroup;
 
-  constructor(private readonly fb: FormBuilder) { }
+  constructor(private readonly fb: FormBuilder, private router: Router) { }
 
 
   ngOnInit(): void {
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit (): void{
-    console.log('Hola');
+    console.log('Form ->',this.dataForm.value);
+    this.router.navigate(['sistema']);
   }
   initForm (): FormGroup{
     return this.fb.group({
@@ -25,6 +27,4 @@ export class LoginComponent implements OnInit {
       cedula: ['', [Validators.required]]
     })
   }
-
-
 }

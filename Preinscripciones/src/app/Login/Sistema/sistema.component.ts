@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
+import {Router} from "@angular/router";
+
 
 @Component({
 
@@ -29,7 +31,9 @@ export class SistemaComponent implements OnInit {
     thirdCtrl: ['', Validators.required],
   });
 
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private _formBuilder: FormBuilder, private router: Router) {
+    console.log('Este componente contructor');
+  }
 
   ngOnInit(): void {
   }

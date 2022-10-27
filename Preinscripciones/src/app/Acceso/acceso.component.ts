@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
+
 
 @Component({
   selector: 'app-acceso',
@@ -12,14 +14,17 @@ export class AccesoComponent implements OnInit {
 
   dataForm!: FormGroup;
 
-  constructor(private readonly fb: FormBuilder) { }
+  constructor(private readonly fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.dataForm = this.initForm();
   }
   onSubmit (): void{
-    console.log('Hola');
+    console.log('Form ->',this.dataForm.value);
+    this.router.navigate(['login']);
+
   }
+
   initForm (): FormGroup{
     return this.fb.group({
       email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
