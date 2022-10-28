@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 interface Food {
   value: string;
@@ -57,7 +58,7 @@ export class EstudianteComponent implements OnInit {
     tios: false,
   });
 
-  constructor(private readonly student: FormBuilder) {
+  constructor(private readonly student: FormBuilder, private router: Router) {
 
   }
 
@@ -65,11 +66,12 @@ export class EstudianteComponent implements OnInit {
     this.studentForm = this.initForm();
 
   }
-
   onSubmit(): void {
-    console.log("Esta funcionando el boton");
+
     console.log('Form ->', this.studentForm.value);
   }
+
+
 
   initForm(): FormGroup {
     return this.student.group({
@@ -210,31 +212,3 @@ export class EstudianteComponent implements OnInit {
   }
   return this.studentPDF.hasError('studentPDF') ? 'Espacio Vacio' : '';
 }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

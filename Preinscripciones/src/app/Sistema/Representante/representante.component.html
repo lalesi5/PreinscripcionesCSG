@@ -9,10 +9,14 @@
 </head>
 <body>
 <div class="representantePrincipal">
+  <div class="titulo">
+    <h1> <strong>INFORMACION DEL REPRESENTANTE </strong></h1>
+  </div>
   <div class="representante_info">
+
     <form (ngSubmit)="onSubmit()" [formGroup]="representanteForm" class="informationRepresentante">
       <!––***********NOMBRES Y APELLIDOS***************––>
-      <h4> INFORMACION DEL REPRESENTANTE </h4>
+
 
       <!--*************************APELLIDOS*************************-->
       <div class="class1">
@@ -118,48 +122,49 @@
             <! ––«***********CIUDAD***************«––>
             <mat-form-field class="dictInput" appearance="fill">
               <mat-label>CANTON</mat-label>
-              <input matInput id="parentCity" name="parentCity" formControlName="parentCity" minlength="10" maxlength="150">
+              <input matInput id="parentCity" name="parentCity" formControlName="parentCity" minlength="10"
+                     maxlength="150">
               <mat-icon matPrefix>location_city</mat-icon>
               <mat-error *ngIf="representanteForm.invalid">{{msgValidateTexto()}}</mat-error>
             </mat-form-field>
             <mat-form-field class="dictInput" appearance="fill">
               <mat-label>DIRECCION EXACTA</mat-label>
-              <input matInput id="parentAddress" name="parentAddress" formControlName="parentAddress" minlength="10" maxlength="150">
+              <input matInput id="parentAddress" name="parentAddress" formControlName="parentAddress" minlength="10"
+                     maxlength="150">
               <mat-icon matPrefix>home</mat-icon>
               <mat-error *ngIf="representanteForm.invalid">{{msgValidateTexto()}}</mat-error>
             </mat-form-field>
           </div>
         </div>
 
-      <! ––«****************CONTACTOS*******************«––>
-      <div class="columna7">
-        <h4> NUMEROS DE CONTACTO </h4>
-        <div class="cont_7">
-          <! ––«***********Telefono1***************«––>
-          <mat-form-field appearance="fill" class="telInput">
-            <mat-label>Telefono Convencional</mat-label>
-            <span matPrefix> </span>
-            <input (keydown)="check($event)" type="tel" matInput id="parentPhone1" formControlName="parentPhone1" required minlength="10" maxlength="10" placeholder="098-027-5610">
-            <mat-icon matSuffix>phone</mat-icon>
-            <mat-error *ngIf="representanteForm.invalid">{{msgValidateCelular()}}</mat-error>
-          </mat-form-field>
-          <! ––«***********Telefono2***************«––>
-          <mat-form-field appearance="fill" class="telInput">
-            <mat-label>Celular 2</mat-label>
-            <input (keydown)="check($event)" type="tel" matInput id="parentPhone2" formControlName="parentPhone2"
-                   requered minlength="10" maxlength="10" placeholder="098-027-5610">
-            <mat-icon matSuffix>phone_android</mat-icon>
-            <mat-error *ngIf="representanteForm.invalid">{{msgValidateCelular()}}</mat-error>
-          </mat-form-field>
-        </div>
-      </div>
-      </div>
-      <div class="class9">
-        <div class="columna9">
-          <div class="cont_9">
-        <button id="button1" type="submit" mat-raised-button>Guardar<mat-icon matPrefix>save</mat-icon></button>
+        <! ––«****************CONTACTOS*******************«––>
+        <div class="columna7">
+          <h4> NUMEROS DE CONTACTO </h4>
+          <div class="cont_7">
+            <! ––«***********Telefono1***************«––>
+            <mat-form-field appearance="fill" class="telInput">
+              <mat-label>Telefono Convencional</mat-label>
+              <span matPrefix> </span>
+              <input (keydown)="check($event)" type="tel" matInput id="parentPhone1" formControlName="parentPhone1"
+                     required minlength="10" maxlength="10" placeholder="098-027-5610">
+              <mat-icon matSuffix>phone</mat-icon>
+              <mat-error *ngIf="representanteForm.invalid">{{msgValidateCelular()}}</mat-error>
+            </mat-form-field>
+            <! ––«***********Telefono2***************«––>
+            <mat-form-field appearance="fill" class="telInput">
+              <mat-label>Celular 2</mat-label>
+              <input (keydown)="check($event)" type="tel" matInput id="parentPhone2" formControlName="parentPhone2"
+                     requered minlength="10" maxlength="10" placeholder="098-027-5610">
+              <mat-icon matSuffix>phone_android</mat-icon>
+              <mat-error *ngIf="representanteForm.invalid">{{msgValidateCelular()}}</mat-error>
+            </mat-form-field>
           </div>
         </div>
+      </div>
+      <div class="class9">
+        <button mat-raised-button id="button2" type="button" onclick="history.back()" ><mat-icon matSuffix>arrow_back</mat-icon>Atrás</button>
+        <button mat-raised-button id="button1" type="submit" >Guardar<mat-icon matPrefix>save</mat-icon></button>
+        <button mat-raised-button id="button3"  >Siguiente<mat-icon matPrefix>arrow_forward</mat-icon></button>
       </div>
 
     </form>
