@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit (): void{
     console.log('Form ->',this.dataForm.value);
-    this.router.navigate(['sistema/inicio']);
+    this.router.navigate(['sistema']);
   }
   initForm (): FormGroup{
     return this.fb.group({
