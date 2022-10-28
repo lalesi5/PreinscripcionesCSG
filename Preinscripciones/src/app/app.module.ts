@@ -14,6 +14,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {AccesoComponent} from "./Acceso/acceso.component";
 import {LoginComponent} from "./Login/login.component";
+import {RouterModule } from '@angular/router';
 
 
 
@@ -45,7 +46,7 @@ import {LoginComponent} from "./Login/login.component";
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
-
+  bootstrap: [AppComponent],
+  exports:[RouterModule]
 })
 export class AppModule{}
