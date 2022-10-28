@@ -17,9 +17,13 @@ export class EstudianteComponent implements OnInit {
   studentForm!: FormGroup;
 
   //ERROR DE APELLIDOS
-  lastNameStudent = new FormControl('', [Validators.required]);
+  lastNameStudent1 = new FormControl('', [Validators.required]);
+  lastNameStudent2 = new FormControl('', [Validators.required]);
+
   //ERROR DE NOMBRE
-  nameStudent = new FormControl('', Validators.required)
+  nameStudent1 = new FormControl('', Validators.required)
+  nameStudent2 = new FormControl('', Validators.required)
+
   /*ERROR DE EMAIL
   email = new FormControl('', [Validators.required, Validators.email]);*/
   //ERROR FECHA
@@ -64,18 +68,21 @@ export class EstudianteComponent implements OnInit {
 
   onSubmit(): void {
     console.log("Esta funcionando el boton");
-    //console.log('Form ->', this.studentForm.value);
+    console.log('Form ->', this.studentForm.value);
   }
 
   initForm(): FormGroup {
     return this.student.group({
 
 
-      lastNameStudent: ['', [Validators.required, Validators.maxLength(50)]],
+      lastNameStudent1: ['', [Validators.required, Validators.maxLength(50)]],
+      lastNameStudent2: ['', [Validators.required, Validators.maxLength(50)]],
 
 
       //ERROR DE NOMBRE
-      nameStudent: ['', [Validators.required, Validators.maxLength(50)]],
+      nameStudent1: ['', [Validators.required, Validators.maxLength(50)]],
+      nameStudent2: ['', [Validators.required, Validators.maxLength(50)]],
+
 
       /*ERROR DE EMAIL
       email = new FormControl('', [Validators.required, Validators.email]);*/

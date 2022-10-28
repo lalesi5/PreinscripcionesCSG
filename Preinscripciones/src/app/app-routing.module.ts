@@ -11,12 +11,9 @@ const routes: Routes = [
   {path: '', redirectTo: 'acceso', pathMatch: 'full'},
 
   {path: 'acceso', component: AccesoComponent},
-  //{path: 'login', component: LoginComponent},
-   {
-     path: 'login',
-    loadChildren: () => import('./Login/login.module').then(m => m.LoginModule)},
+  {path: 'login', component: LoginComponent},
+  {path: 'sistema', loadChildren: () => import('./Sistema/sistema.module').then(m => m.SistemaModule)},
   {path: '**', redirectTo: 'acceso', pathMatch: 'full'}
-
 ];
 
 

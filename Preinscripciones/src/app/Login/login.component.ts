@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 
 @Component({
@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
   dataForm!: FormGroup;
-
+  
   constructor(private readonly fb: FormBuilder, private router: Router) { }
 
 
@@ -19,13 +19,12 @@ export class LoginComponent implements OnInit {
 
   onSubmit (): void{
     console.log('Form ->',this.dataForm.value);
-    this.router.navigate(['sistema/inicio']);
+    this.router.navigate(['sistema']);
   }
   initForm (): FormGroup{
     return this.fb.group({
       clave: ['', [Validators.required]],
-      cedula: ['', [Validators.required]]
-    })
+      cedula: ['', [Validators.required]]  })
   }
 }
 

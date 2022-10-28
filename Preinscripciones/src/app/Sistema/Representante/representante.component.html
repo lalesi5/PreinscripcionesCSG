@@ -10,7 +10,7 @@
 <body>
 <div class="representantePrincipal">
   <div class="representante_info">
-    <form [formGroup]="representanteForm" class="informationRepresentante">
+    <form (ngSubmit)="onSubmit()" [formGroup]="representanteForm" class="informationRepresentante">
       <!––***********NOMBRES Y APELLIDOS***************––>
       <h4> INFORMACION DEL REPRESENTANTE </h4>
 
@@ -154,7 +154,6 @@
         </div>
       </div>
       </div>
-
       <div class="class9">
         <div class="columna9">
           <div class="cont_9">

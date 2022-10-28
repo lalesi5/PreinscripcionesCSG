@@ -4,6 +4,7 @@ import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 import {Router} from "@angular/router";
 
 
+
 @Component({
 
   selector: 'app-sistema',
@@ -36,6 +37,10 @@ export class SistemaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
 
+  }
+  onSubmit (): void{
+    console.log('El boton funciona');
+    //this.router.navigate(['login']);
+  }
 }

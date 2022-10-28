@@ -9,7 +9,6 @@ import {FinalizarComponent} from "./Finalizar/finalizar.component";
 import {InicioComponent} from "./Inicio/inicio.component";
 
 const routes: Routes = [
-
   {path: '', component: SistemaComponent, children:
     [
         {path: '', redirectTo: 'inicio', pathMatch: "full" },
@@ -18,7 +17,9 @@ const routes: Routes = [
         {path: 'representante', component: RepresentanteComponent},
         {path: 'finalizar', component: FinalizarComponent},
         {path: 'inicio', component: InicioComponent}
-]}
+    ]},
+
+  {path: '**', redirectTo: 'sistema', pathMatch: 'full'}
 
 ]
 

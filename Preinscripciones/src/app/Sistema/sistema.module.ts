@@ -62,6 +62,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {InicioComponent} from "./Inicio/inicio.component";
 import {FinalizarComponent} from "./Finalizar/finalizar.component";
 import {NavbarComponent} from "./Navbar/navbar.component";
+import { RouterModule } from '@angular/router';
+import {SistemaComponent} from "./sistema.component";
 
 
 
@@ -72,6 +74,7 @@ import {NavbarComponent} from "./Navbar/navbar.component";
   imports: [
     CommonModule,
     SistemaRoutingModule,
+    RouterModule,
 
     //MODULOS DE PRUEBA
     A11yModule,
@@ -126,6 +129,7 @@ import {NavbarComponent} from "./Navbar/navbar.component";
     //MODULOS DE PRUEBA
   ],
   declarations: [
+    SistemaComponent,
     EstudianteComponent,
     RepresentanteComponent,
     InicioComponent,

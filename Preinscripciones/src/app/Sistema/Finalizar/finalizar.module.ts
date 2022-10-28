@@ -1,11 +1,12 @@
 import { NgModule } from "@angular/core";
 import { FinalizarRoutingModule } from './finalizar-routing.module'
-import {FinalizarComponent} from "./finalizar.component";
+
+import {SistemaModule} from "../sistema.module";
 
 @NgModule({
 
-  declarations: [FinalizarComponent],
-  imports:[FinalizarRoutingModule],
+  declarations: [],
+    imports: [FinalizarRoutingModule, SistemaModule],
 
 })
 export class  FinalizarModule{}

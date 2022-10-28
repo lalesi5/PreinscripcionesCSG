@@ -108,8 +108,9 @@ export class RepresentanteComponent implements OnInit {
     this.representanteForm = this.initForm();
   }
 
-  onSubmit (): void{
-    console.log('Hola');
+
+  onSubmit(): void {
+      console.log('Form ->', this.representanteForm.value);
   }
 
 
