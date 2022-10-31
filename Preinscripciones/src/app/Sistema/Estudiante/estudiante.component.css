@@ -19,6 +19,7 @@
 
 form{
    width: 80%;
+   background-color: rgb(80, 80, 116);
  }
 
 @media (max-width:1000px){

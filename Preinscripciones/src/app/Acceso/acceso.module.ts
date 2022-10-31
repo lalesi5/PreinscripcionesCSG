@@ -23,12 +23,5 @@ import { MatInputModule } from '@angular/material/input';
     imports: [CommonModule,
     AccesoRoutingModule]
 
-<<<<<<< HEAD
-}) 
-  export class AccesoModule{}
-=======
-    ]
-
 })
   export class AccesoModule{}
->>>>>>> c3605d546d9f03290f097b32cdfb6429e5606e62

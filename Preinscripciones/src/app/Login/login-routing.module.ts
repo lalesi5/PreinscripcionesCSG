@@ -14,12 +14,7 @@ const routes: Routes = [
   // {path: '**', redirectTo: 'login', pathMatch: 'full'}
 ]
 @NgModule({
-<<<<<<< HEAD
     imports: [ RouterModule.forChild(routes)
     ]
-=======
-    imports:
-      [ RouterModule.forChild(routes)]
->>>>>>> c3605d546d9f03290f097b32cdfb6429e5606e62
 })
 export class LoginRoutingModule{}
