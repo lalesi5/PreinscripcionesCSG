@@ -15,11 +15,13 @@
         <form (ngSubmit)="onSubmit()" [formGroup] ="dataForm">
           <mat-form-field appearance="fill">
             <mat-label>Usuario</mat-label>
-            <input class="form-control" id="cedula" name="cedula" formControlName="cedula" matInput placeholder="1725542961" required>
+            <input matInput id="cedula" (keydown)="check1($event)" name="cedula" formControlName="cedula" minlength="10" maxlength="15" placeholder="1725542961" required>
+            <mat-error *ngIf="dataForm.invalid">{{msgValidateCedula()}}</mat-error>
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Clave</mat-label>
-            <input matInput type="password" formControlName="clave" required>
+            <input matInput type="password" (keydown)="check2($event)" formControlName="clave" minlength="8" maxlength="8" required>
+            <mat-error *ngIf="dataForm.invalid">{{msgValidateClave()}}</mat-error>
           </mat-form-field>
           <button mat-raised-button color="primary" id="button2" type="submit" [disabled]="dataForm.invalid" mat-raised-button>Iniciar Sesion</button>
         </form>

@@ -10,7 +10,10 @@
 <body>
 <div class="principal">
         <form (ngSubmit)="onSubmit()" >
-          <button  id="button1" type="submit">Cerrar Sesion<mat-icon>logout</mat-icon></button>
+          <div class="class15">
+            <button mat-raised-button id="button6" onclick="history.back()" mat-raised-button><mat-icon matSuffix>arrow_back</mat-icon>Atrás</button>
+            <button mat-raised-button id="button1" type="submit">Cerrar Sesion<mat-icon>logout</mat-icon></button>
+          </div>
         </form>
 </div>
 </body>
