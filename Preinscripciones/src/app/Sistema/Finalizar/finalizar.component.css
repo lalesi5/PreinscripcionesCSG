@@ -1,0 +1,14 @@
+.class9{
+  /* background-color: #7D3C98;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 30px;
+}
+.class15{
+  /* background-color: #D4AC0D;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+}

@@ -1,0 +1,305 @@
+/* NOMBRES Y APELLIDOS*/
+.titulo{
+  background-color: #174381;
+  position: relative;
+  color:  white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2.5em;
+}
+.studentPrincipal {
+   background-color: #D4E6F1;
+  margin: 0;
+  padding: 0;
+}
+
+.student_info {
+  padding: 60px 0;
+  width: 80%;
+  margin: 0 auto;
+   background-color: #EAFAF1 ;
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+  gap: 3.5em;
+}
+
+form{
+   width: 80%;
+ }
+
+@media (max-width:1000px){
+  .student_info{
+    width: 100%;
+  }
+  form{
+    width: 100%;
+  }
+}
+
+@media (min-width:1000px){
+  form{
+    width: 1070px;
+  }
+}
+
+ .class1{
+   padding-top: 10px;
+   padding-bottom: 10px;
+   /*background-color: #45B39D ;*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.3em;
+  justify-content: space-between;
+}
+.class2{
+  /*background-color: #B35E45;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.class3{
+  /* background-color: #7D3C98;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.class5{
+  /* background-color: #283747 ;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.class9{
+  /*background-color: #283747 ;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.class13{
+ /* background-color: #D4AC0D;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.class15{
+  /* background-color: #D4AC0D;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+/*COLUMNAS*/
+.columna1{
+  /*background-color: #E67E22;*/
+width: 450px;
+}
+.columna2{
+  /*background-color: #CB4335 ;*/
+  width: 450px;
+}
+.columna3{
+  /* background-color: #707B7C  ;*/
+  width: 450px;
+}
+.columna4{
+  /* background-color: #76D7C4 ;*/
+  width: 450px;
+}
+.columna5{
+  /*background-color: #5499C7 ;*/
+  width: 450px;
+}
+.columna6{
+  /*background-color: #626567 ;*/
+  width: 450px;
+}
+.columna7{
+  /* background-color: #922B21 ;*/
+  width: 450px;
+}
+.columna8{
+  /*background-color: #1D8348 ;*/
+  width: 450px;
+}
+.columna9{
+  /*background-color:  #616A6B;*/
+  width: 450px;
+}
+.columna10{
+  /*background-color: #154360 ;*/
+  width: 450px;
+}
+.columna11{
+  /* background-color: #F1C40F  ;*/
+  width: 450px;
+
+}
+.columna12{
+  /*background-color: #0B5345 ;*/
+  width: 450px;
+}
+.columna13{
+  /*background-color: #D2B4DE  ;*/
+  width: 450px;
+}
+.columna14{
+   /*background-color: #7F8C8D;*/
+  width: 450px;
+}
+
+/*CONTENIDOS*/
+/*.cont_1{
+  background-color: #EAFAF1;
+}
+.nivel{
+  background-color: #EAFAF1;
+}
+.cont_5{
+  background-color: #EAFAF1;
+}
+.cont_6{
+   background-color: #EAFAF1;
+ }
+.cont_7{
+  background-color: #EAFAF1;
+}
+.cont_8{
+  background-color: #EAFAF1;
+}
+.cont_9{
+  background-color: #EAFAF1;
+}
+.cont_10{
+  background-color: #EAFAF1;
+}
+.cont_11{
+  background-color: #EAFAF1;
+}
+.cont_12{
+  background-color: #EAFAF1;
+}
+.cont_13{
+  background-color: #EAFAF1;
+}
+.cont_14{
+  background-color: #EAFAF1;
+}*/
+
+h4{
+margin-top: 10px;
+}
+.studentCI2{
+  padding-top: 20px;
+  width: 275px;
+}
+.dictInput{
+  /*background-color: #D4AC0D;*/
+  width: 275px;
+}
+.dictInput1{
+  /*background-color: #D4AC0D;*/
+  width: 275px;
+}
+.telInput{
+  /*background-color: #D4AC0D;*/
+  width: 275px;
+}
+
+.class1 .studentInput .studentInput1 {
+/*  background: blueviolet;*/
+ width: 275px;
+ }
+
+
+.example-section {
+ margin: 12px 0;
+}
+
+/* CON QUIENES VIVE
+.homeStudent {
+ min-width: 150px;
+ max-width: 500px;
+ width: 100%;
+}*/
+
+
+/*TIPO DE IDENTIFICACION */
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+
+/*CEDULA O PASAPORTE */
+.inputStudentCI {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+/* NIVEL AL QUE APLICA*/
+.levelAplication {
+  width: 100%;
+}
+
+
+/* INSTITUCIÓN DE PROCEDENCIA*/
+.informationInstitution {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+/* HIJO DE EX ALUMNO*/
+.ex-alumnoChild {
+  width: 100%;
+}
+
+.ex-alumnoChild2 {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+/* DIRECCION*/
+.studentAddress {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+/*CIUDAD*/
+.city {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+/*  SUBIR IMAGEN  */
+
+
+.wrapper-button {
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.w-100 {
+  width: 100%;
+}

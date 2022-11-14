@@ -1,34 +1,26 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import {NgModule} from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import {AccesoComponent} from "./Acceso/acceso.component";
+import {LoginComponent} from "./Login/login.component";
+
+
 
 
 const routes: Routes = [
 
-  {
-    path: 'acceso',
-    loadChildren: () => import ('src/app/Acceso/acceso/acceso.module').then(m => m.AccesoModule)
-  },
-  {
-    path: 'sistema',
-    loadChildren: () => import ("./Login/login/Sistema/sistema/sistema.module").then(m => m.SistemaModule)
-  },
+  {path: '', redirectTo: 'acceso', pathMatch: 'full'},
 
-  {
-    path: '**',
-    redirectTo: 'acceso'
-  }
-
+  {path: 'acceso', component: AccesoComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'sistema', loadChildren: () => import('./Sistema/sistema.module').then(m => m.SistemaModule)},
+  {path: '**', redirectTo: 'acceso', pathMatch: 'full'}
 ];
 
 
 @NgModule({
-        imports: [
-        RouterModule.forRoot( routes )
-    ],
-    exports:[
-        RouterModule
-    ]
-  }) 
-  export class AppRoutingModule{
+  imports: [
+    RouterModule.forRoot(routes, {useHash: true})],
+  exports: [RouterModule]
 
-  }
+})
+export class AppRoutingModule { }

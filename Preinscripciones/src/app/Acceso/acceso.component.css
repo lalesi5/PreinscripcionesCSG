@@ -1,0 +1,80 @@
+
+/*.Bienvenida{*/
+/*  background-color: white;*/
+/*  position: absolute;*/
+/*  color:  #0A529D;*/
+/*  width: 100%;*/
+/*  height: 100px;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: space-evenly;*/
+/*  gap: 2.5em;*/
+/*}*/
+.principal{
+  background-image: url("https://www.csgabriel.edu.ec/wp-content/uploads/2022/05/02.ActoCivico-YoMeCuido.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.principal:before{
+  content: "";
+  width: 100%;
+  min-height:100vh;
+  position: absolute;
+  background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75));
+}
+
+.acceso{
+  width: 80%;
+  margin: 0 auto;
+  max-width: 900px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.registro{
+  flex-basis: 200px;
+  max-width: 350px;
+  height: 400px;
+  border-radius: 0% 2% 2% 0%;
+  flex-grow: 1;
+}
+
+
+.informacion{
+  flex-basis: 200px;
+  max-width: 350px;
+  height: 400px;
+  border-radius: 2% 0% 0% 2%;
+  background-image: linear-gradient(to right, rgb(128, 187, 243), rgb(75, 163, 221));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  flex-grow: 1;
+}
+
+
+.tittle{
+  padding-top: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+form{
+  padding-top: 50px;
+  display: grid;
+  gap: 2.5em;
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  width: 100%;
+}

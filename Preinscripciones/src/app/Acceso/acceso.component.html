@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso</title>
+</head>
+<body>
+<div class="principal">
+
+  <div class="acceso">
+    <mat-card class="informacion">
+      <mat-card-content>
+        <p class="text">
+          Estimado Representante. <br><br>
+          El proceso es únicamente para nuevos aspirantes a los niveles de Primero de Básica hasta Primero de Bachillerato.
+          <br>Debe registrarse en el sistema con el número de cédula del/la aspirante y un correo electrónico válido del/la representante.
+          <br>Inmediatamente recibirá, en el correo registrado, las instrucciones para continuar. Recuerde revisar el buzón de Spam o correo No Deseado.
+          Si necesita soporte, por favor comuníquese al correo tecnologias@csgabriel.edu.ec <br><br>
+          Saludos cordiales.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="registro">
+      <mat-card-title class="tittle">Registro de acceso al Sistema de Preinscripciones</mat-card-title>
+      <mat-card-content>
+        <form (ngSubmit)="onSubmit()" [formGroup]="dataForm">
+          <mat-form-field appearance="fill">
+            <mat-label>Número de identificación del aspirante</mat-label>
+            <input matInput id="cedula" (keydown)="check($event)" name="cedula" formControlName="cedula" minlength="10" maxlength="15">
+            <mat-error *ngIf="dataForm.invalid">{{msgValidateCedula()}}</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput id="email" name="email" formControlName="email" placeholder="pat@example.com">
+            <mat-error *ngIf="dataForm.invalid">{{msgValidateEmail()}}</mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="primary" id="button1" type="submit" [disabled]="dataForm.invalid" mat-raised-button>Enviar</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>
+</body>
+</html>
+<router-outlet></router-outlet>

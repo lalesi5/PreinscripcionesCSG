@@ -1,0 +1,262 @@
+/* NOMBRES Y APELLIDOS*/
+.titulo{
+  background-color: #174381;
+  position: relative;
+  color:  white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2.5em;
+}
+
+.representantePrincipal {
+   background-color: #D4E6F1;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.representante_info {
+  padding: 60px 0;
+  width: 80%;
+  margin: 0 auto;
+   background-color: #EAFAF1 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5em;
+}
+form{
+  /*background: #F1C40F;*/
+  width: 80%;
+}
+
+@media (max-width:1000px){
+  .representante_info{
+    width: 100%;
+
+  }
+  form{
+    width: 100%;
+  }
+}
+
+@media (min-width:1000px){
+  form{
+    width: 1070px;
+
+  }
+}
+
+.class1{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*background-color: #45B39D ;*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.3em;
+  justify-content: flex-start;
+}
+.class2{
+  /*background-color: #B35E45;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+;
+}
+.class3{
+  /* background-color: #7D3C98;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.class5{
+  /*background-color: #283747 ;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.class8{
+  /* background-color: #7D3C98;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.class9{
+  /* background-color: #7D3C98;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+/*COLUMNAS*/
+.columna1{
+  /*background-color: #E67E22;*/
+  width: 450px;
+}
+.columna2{
+  /*background-color: #CB4335 ;*/
+  width: 450px;
+}
+.columna3{
+  /* background-color: #707B7C  ;*/
+  width: 450px;
+}
+.columna4{
+  /* background-color: #76D7C4 ;*/
+  width: 450px;
+}
+.columna5{
+  /*background-color: #5499C7 ;*/
+  width: 450px;
+}
+.columna6{
+  /*background-color: #626567 ;*/
+  width: 450px;
+}
+.columna7{
+  /* background-color: #922B21 ;*/
+  width: 450px;
+}
+.columna8{
+  /*background-color: #1D8348 ;*/
+  width: 450px;
+}
+
+
+.class1 .representanteInput .representanteInput1{
+  /*  background: blueviolet;*/
+  width: 275px;
+}
+
+h4{
+  margin-top: 10px;
+}
+.dictInput{
+  /*background-color: #D4AC0D;*/
+  width: 275px;
+}
+.telInput{
+  /*background-color: #D4AC0D;*/
+  width: 275px;
+}
+.representante_Email{
+  width: 275px;
+}
+.parentezco {
+
+  width: 275px;
+}
+.parentCI2{
+  padding-top: 20px;
+  width: 275px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.informationParents {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+/*CEDULA O PASAPORTE */
+.inputCI {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+
+/* PARENTEZCO */
+.studentParent {
+  width: 100%;
+}
+
+.studentParent2 {
+  width: 25%;
+}
+
+
+/*TIPO DE IDENTIFICACION */
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+
+
+/* DIRECCION*/
+.addressParent{
+  width: 35%;
+}
+
+/*CIUDAD*/
+.cityParent{
+  width: 35%;
+}
+
+
+/* EMAIL DE CONTACTO*/
+.emailContactParent .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+
+}
+
+.wrapper-button {
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.w-100 {
+  width: 100%;
+}
